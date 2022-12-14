@@ -23,7 +23,6 @@
   background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0) 100%);
 }
 #main .visual .visual-wrapper {
-  display: flex;
   transition: 300ms;
 }
 #main .visual .visual-wrapper .visual_container {
