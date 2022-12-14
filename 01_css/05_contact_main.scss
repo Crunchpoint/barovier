@@ -1,0 +1,293 @@
+@import url(./00_common.css);
+// common.css
+#main {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  transition: 1000ms;
+  z-index: 3;
+  transform: translate3d(0, 0, 0);
+  // visual
+  .visual {
+    width: 100%;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      background: linear-gradient(
+        0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+    .visual_container {
+      z-index: 6;
+      picture {
+        display: block;
+        height: 125vh;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .visual-text-box {
+        width: 100%;
+        position: absolute;
+        top: 41.3%;
+        left: 0;
+        padding: 0 8.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 1;
+        h2 {
+          font-size: 4.375em;
+          line-height: 1.11429em;
+          color: #fff;
+          letter-spacing: 1px;
+          font-weight: 100;
+          margin-bottom: 10px;
+          z-index: 1;
+        }
+        p:nth-of-type(1) {
+          font-size: 0.875em;
+          line-height: 1.35714em;
+          color: #fff;
+          margin-bottom: 15px;
+          z-index: 1;
+        }
+        p:nth-of-type(2) {
+          font-size: 1.5em;
+          line-height: 1.33333em;
+          color: #fff;
+          margin-bottom: 70px;
+          z-index: 1;
+        }
+      }
+    }
+    .visual-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.4;
+    }
+  }
+  .contact-list {
+    padding: 45px 0 130px;
+    background: #000;
+    color: #fff;
+    .contact-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0 40px;
+      max-width: 1200px;
+      margin: auto;
+      .text-wrapper {
+        flex: 0 0 33.333%;
+        width: 33.333%;
+        margin-top: 75px;
+        h4 {
+          font-size: 1.875em;
+          line-height: 1.266em;
+          font-style: italic;
+          color: #fff;
+          font-weight: 100;
+        }
+        div {
+          margin-top: 25px;
+          color: #fff;
+          p {
+            color: inherit;
+            line-height: 1.35em;
+            font-weight: 400;
+          }
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+  .webForm {
+    padding: 120px;
+    background: #f8f5f3;
+    color: #000;
+    .webForm-inner {
+      max-width: 890px;
+      padding: 0 40px;
+      margin: 0 auto;
+      .webForm-textbox01 {
+        text-align: center;
+        h2 {
+          margin-bottom: 10px;
+          font-size: 2.5em;
+          line-height: 1.075em;
+          font-weight: 100;
+        }
+        p {
+          font-size: 1.25em;
+          line-height: 1.5em;
+          font-weight: 300;
+        }
+      }
+      .form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 75px;
+        .form-item1 {
+          flex: 0 0 calc(50% - 20px);
+          width: calc(50% - 20px);
+          .label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.8125em;
+            text-transform: uppercase;
+            line-height: 1.385em;
+            letter-spacing: 2px;
+            color: #000;
+            &::after {
+              content: "*";
+              display: inline-block;
+              margin-left: 2px;
+              font-size: 0.8em;
+              vertical-align: super;
+            }
+          }
+          .input,
+          select {
+            width: 100%;
+            color: #484848;
+            border: 1px solid #dcdcdc;
+            height: 40px;
+            font-size: 1em;
+            box-sizing: border-box;
+          }
+          select {
+            padding-left: 25px;
+            background: white
+              url(../02_image/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg)
+              no-repeat;
+            background-position: right 20px center;
+            background-size: 23px auto;
+          }
+        }
+        .form02 {
+          position: relative;
+          margin-top: 58px;
+        }
+        .form03 {
+          margin-top: 58px;
+          flex: 0 0 100%;
+          width: 100%;
+          div {
+            textarea {
+              width: 100%;
+              min-height: 200px;
+              line-height: 1.25em;
+              color: #484848;
+              resize: vertical;
+              overflow: hidden;
+              resize: none;
+              font-size: 1em;
+              border: none;
+            }
+          }
+        }
+        .declaration {
+          margin-top: 50px;
+          h4 {
+            color: #000;
+            font-weight: bold;
+          }
+          h5 {
+            color: #000;
+            margin-top: 7px;
+            font-size: 0.875em;
+            text-decoration: underline;
+
+            cursor: pointer;
+          }
+          .privacy {
+            margin-top: 25px;
+            .privacy-text {
+              margin-top: 25px;
+              p {
+                color: #000;
+                font-size: 0.875em;
+              }
+            }
+            .radio-wrapper {
+              margin-top: 5px;
+              display: flex;
+              .radio-accept {
+                margin-right: 0.5em;
+                margin-top: 0;
+                position: relative;
+                cursor: pointer;
+                input {
+                  cursor: pointer;
+                }
+                label {
+                  &::before {
+                    content: "Yes";
+                    text-transform: uppercase;
+                    font-size: 0.8125em;
+                    padding-left: 5px;
+                  }
+                }
+              }
+              .radio-decline {
+                input {
+                  cursor: pointer;
+                }
+                label {
+                  &::before {
+                    content: "No";
+                    text-transform: uppercase;
+                    font-size: 0.8125em;
+                    padding-left: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .submit {
+          width: 100%;
+          margin: 20px;
+          text-align: right;
+          input {
+            appearance: none;
+            background: #000;
+            color: #fff;
+            height: 40px;
+            cursor: pointer;
+            padding: 10px 40px;
+            font-size: 0.8125em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+@import "_05_media_contact";

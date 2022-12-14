@@ -1,0 +1,655 @@
+@import url(./00_common.css);
+@import url(./00_common.css);
+#main {
+  width: 100%;
+  position: relative;
+  background: #000;
+  transition: 1000ms;
+  z-index: 3;
+  transform: translate3d(0, 0, 0);
+}
+#main .visual {
+  width: 100%;
+  position: relative;
+}
+#main .visual:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0) 100%);
+}
+#main .visual .visual_container {
+  z-index: 6;
+}
+#main .visual .visual_container picture {
+  display: block;
+  height: 125vh;
+  overflow: hidden;
+  position: relative;
+}
+#main .visual .visual_container picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main .visual .visual_container .visual-text-box {
+  width: 100%;
+  position: absolute;
+  top: 41.3%;
+  left: 0;
+  padding: 0 8.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+}
+#main .visual .visual_container .visual-text-box h2 {
+  font-size: 4.375em;
+  line-height: 1.11429em;
+  letter-spacing: 3px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+#main .visual .visual_container .visual-text-box h2 span {
+  display: inline-block;
+  opacity: 0;
+  font-family: "BDT";
+  color: #fff;
+  padding: 2px;
+}
+#main .visual .visual_container .visual-text-box p:nth-of-type(1) {
+  font-size: 0.875em;
+  line-height: 1.35714em;
+  color: #fff;
+  margin-bottom: 15px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: fadeInUp 400ms 800ms 1 both;
+          animation: fadeInUp 400ms 800ms 1 both;
+}
+#main .visual .visual_container .visual-text-box p:nth-of-type(2) {
+  font-size: 1.5em;
+  line-height: 1.33333em;
+  color: #fff;
+  margin-bottom: 70px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: fadeInUp 400ms 1000ms 1 both;
+          animation: fadeInUp 400ms 1000ms 1 both;
+}
+#main .visual .visual-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+}
+#main .content01-container {
+  margin: 120px 0;
+}
+#main .content01-container .content01-text {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+#main .content01-container .content01-text .content01-text-box p {
+  font-size: 1.5em;
+  line-height: 1.333em;
+  font-weight: 300;
+  font-family: "Roboto2";
+}
+#main .content02-container {
+  position: relative;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+#main .content02-container .content02-menu {
+  border-bottom: 1px solid #d4d4d4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 30px 40px;
+}
+#main .content02-container .content02-menu ul {
+  display: flex;
+  text-align: left;
+}
+#main .content02-container .content02-menu li {
+  padding-right: 40px;
+}
+#main .content02-container .content02-menu li a {
+  font-size: 0.9375em;
+  letter-spacing: 1px;
+}
+#main .content02-container .content02-projects {
+  margin-top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 0 100%;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 {
+  flex: 0 0 45%;
+  width: 45%;
+  margin-bottom: 80px;
+  position: relative;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div {
+  position: relative;
+  background: #000;
+  z-index: 1;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div picture img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 {
+  max-width: calc(100% - 100px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 1;
+  background: transparent;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 p:first-child {
+  font-size: 1em;
+  line-height: 1.0625em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-family: "BDT";
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 h2 {
+  font-size: 2.5em;
+  line-height: 1.075em;
+  font-family: "BDT";
+  font-weight: 100;
+  color: #fff;
+}
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 p:last-child {
+  margin-top: 16px;
+  font-size: 0.8125em;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+#main .content02-container .button01 {
+  text-align: center;
+}
+#main .content02-container .button01 a {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid black;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 50px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes revealOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes revealOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 360px) and (max-width: 767px) {
+  #main {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    z-index: 3;
+    transform: translate3d(0, 0, 0);
+  }
+  #main .visual {
+    width: 100%;
+    position: relative;
+  }
+  #main .visual:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0) 100%);
+  }
+  #main .visual .visual_container {
+    z-index: 6;
+  }
+  #main .visual .visual_container picture {
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  #main .visual .visual_container picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #main .visual .visual_container .visual-text-box {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 8.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    align-items: center;
+    height: 100%;
+  }
+  #main .visual .visual_container .visual-text-box h2 {
+    font-size: 2em;
+    line-height: 1.03125em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  #main .visual .visual_container .visual-text-box p:nth-of-type(1) {
+    font-size: 0.875em;
+    line-height: 1.35714em;
+    color: #fff;
+    margin-bottom: 15px;
+    z-index: 1;
+    display: none;
+  }
+  #main .visual .visual_container .visual-text-box p:nth-of-type(2) {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    color: #fff;
+    margin-bottom: 70px;
+    z-index: 1;
+  }
+  #main .visual .visual-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+  }
+  #main .content01-container {
+    margin: 60px 0;
+  }
+  #main .content01-container .content01-text {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+  }
+  #main .content01-container .content01-text .content01-text-box p {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-weight: 300;
+    font-family: "Roboto2";
+  }
+  #main .content02-container {
+    position: relative;
+    padding: 0 25px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  #main .content02-container .content02-menu {
+    border-bottom: 1px solid #d4d4d4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 30px 40px;
+  }
+  #main .content02-container .content02-menu ul {
+    display: none;
+    text-align: left;
+  }
+  #main .content02-container .content02-menu li {
+    padding-right: 40px;
+  }
+  #main .content02-container .content02-menu li a {
+    font-size: 0.9375em;
+    letter-spacing: 1px;
+  }
+  #main .content02-container .content02-projects {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper {
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0 0 100%;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 {
+    flex: 0 0 45%;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div {
+    position: relative;
+    background: #000;
+    z-index: 1;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div picture img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 {
+    max-width: calc(100% - 100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    z-index: 1;
+    background: transparent;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 p:first-child {
+    font-size: 0.875em;
+    line-height: 1.14286em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-family: "BDT";
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 h2 {
+    font-size: 1.875em;
+    line-height: 1.33333em;
+    font-family: "BDT";
+    font-weight: 100;
+    color: #fff;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 p:last-child {
+    font-size: 0.8125em;
+    letter-spacing: 0.5px;
+    color: #fff;
+  }
+  #main .content02-container .button01 {
+    text-align: center;
+  }
+  #main .content02-container .button01 a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    z-index: 3;
+    transform: translate3d(0, 0, 0);
+  }
+  #main .visual {
+    width: 100%;
+    position: relative;
+  }
+  #main .visual:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0) 100%);
+  }
+  #main .visual .visual_container {
+    z-index: 6;
+  }
+  #main .visual .visual_container picture {
+    display: block;
+    height: 125vh;
+    overflow: hidden;
+    position: relative;
+  }
+  #main .visual .visual_container picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #main .visual .visual_container .visual-text-box {
+    width: 100%;
+    position: absolute;
+    top: 41.3%;
+    left: 0;
+    padding: 0 8.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+  }
+  #main .visual .visual_container .visual-text-box h2 {
+    font-size: 3.125em;
+    line-height: 1.08em;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  #main .visual .visual_container .visual-text-box p:nth-of-type(1) {
+    font-size: 0.875em;
+    line-height: 1.35714em;
+    color: #fff;
+    margin-bottom: 15px;
+    z-index: 1;
+  }
+  #main .visual .visual_container .visual-text-box p:nth-of-type(2) {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    color: #fff;
+    margin-bottom: 70px;
+    z-index: 1;
+  }
+  #main .visual .visual-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+  }
+  #main .content01-container {
+    margin-bottom: 120px;
+  }
+  #main .content01-container .content01-text {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+  }
+  #main .content01-container .content01-text .content01-text-box p {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-weight: 300;
+    font-family: "Roboto2";
+  }
+  #main .content02-container {
+    position: relative;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  #main .content02-container .content02-menu {
+    border-bottom: 1px solid #d4d4d4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 30px 40px;
+  }
+  #main .content02-container .content02-menu ul {
+    display: flex;
+    text-align: left;
+  }
+  #main .content02-container .content02-menu ul li {
+    padding-right: 40px;
+  }
+  #main .content02-container .content02-menu ul li a {
+    font-size: 0.9375em;
+    letter-spacing: 1px;
+  }
+  #main .content02-container .content02-projects {
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0 0 100%;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 {
+    flex: 0 0 45%;
+    width: 45%;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div {
+    position: relative;
+    background: #000;
+    z-index: 1;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div picture img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 {
+    max-width: calc(100% - 100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    z-index: 1;
+    background: transparent;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 p:first-child {
+    font-size: 0.875em;
+    line-height: 1.14286em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-family: "BDT";
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 h2 {
+    font-size: 1.875em;
+    line-height: 1.33333em;
+    font-family: "BDT";
+    font-weight: 100;
+    color: #fff;
+  }
+  #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a .content02-textBox1 p:last-child {
+    font-size: 0.8125em;
+    letter-spacing: 0.5px;
+    color: #fff;
+  }
+  #main .content02-container .button01 {
+    text-align: center;
+  }
+  #main .content02-container .button01 a {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+  }
+}/*# sourceMappingURL=03_project_main.css.map */

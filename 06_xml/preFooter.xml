@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="pre-footer-inner">
+	<div class="footer-content01">
+		<h2>Newsletter</h2>
+		<h3>Stay up to date on news</h3>
+		<p>Subscribe to receive news and updates</p>
+		<form>
+			<input type="email" placeholder="E-mail" />
+			<input type="submit" value="Subscribe" />
+		</form>
+	</div>
+</div>
