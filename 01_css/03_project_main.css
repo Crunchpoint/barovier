@@ -158,11 +158,6 @@
   background: #000;
   z-index: 1;
 }
-#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div:hover {
-  transform: scale(1.03);
-  transition: 250ms;
-  opacity: 1;
-}
 #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div picture img {
   width: 100%;
   height: 100%;

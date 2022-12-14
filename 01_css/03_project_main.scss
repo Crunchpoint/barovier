@@ -163,11 +163,7 @@
               position: relative;
               background: #000;
               z-index: 1;
-              &:hover {
-                transform: scale(1.03);
-                transition: 250ms;
-                opacity: 1;
-              }
+          
               // 수정중
               picture {
                 img {
