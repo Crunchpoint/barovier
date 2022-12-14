@@ -153,6 +153,11 @@
   margin-bottom: 80px;
   position: relative;
 }
+#main .content02-container .content02-projects .content02-projects-wrapper .content02-project1:hover {
+  transform: scale(1.02);
+  transition: 250ms;
+  opacity: 1;
+}
 #main .content02-container .content02-projects .content02-projects-wrapper .content02-project1 a div {
   position: relative;
   background: #000;

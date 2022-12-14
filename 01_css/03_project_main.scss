@@ -158,12 +158,16 @@
           width: 45%;
           margin-bottom: 80px;
           position: relative;
+          &:hover {
+            transform: scale(1.02);
+            transition: 250ms;
+            opacity: 1;
+          }
           a {
             div {
               position: relative;
               background: #000;
               z-index: 1;
-          
               // 수정중
               picture {
                 img {
