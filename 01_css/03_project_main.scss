@@ -163,6 +163,11 @@
               position: relative;
               background: #000;
               z-index: 1;
+              &:hover {
+                transform: scale(1.03);
+                transition: 250ms;
+                opacity: 1;
+              }
               // 수정중
               picture {
                 img {
@@ -170,12 +175,6 @@
                   height: 100%;
                   opacity: 0.5;
                   object-fit: cover;
-                  &:hover {
-                    transform: scale(1.07);
-                    transition: 250ms;
-                    opacity: 1;
-                    border-radius: 10%;
-                  }
                 }
               }
             }
