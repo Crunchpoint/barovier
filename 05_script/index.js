@@ -42,11 +42,7 @@ const elMain = document.querySelector("#main"),
   cont3b1 = document.querySelector(".content03-text a"),
   cont4img1 = document.querySelector(".content04-bg img:nth-child(2)"),
   cont5txtBox = document.querySelectorAll(".fadeInEffect02"),
-  cont5Item = document.querySelectorAll(".contentSlider"),
-  visualSwiper = document.querySelector(".visual"),
-  swiperItems = document.querySelectorAll(".visual_container"),
-  pagination = document.querySelectorAll(".pagination li");
-
+  cont5Item = document.querySelectorAll(".contentSlider");
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
     value = window.pageYOffset / elItemCon.offsetTop + 1;
@@ -95,49 +91,6 @@ document.addEventListener("scroll", () => {
   }
   // console.log(currentScrollValue);
 });
-
-// let idx = 0,
-// move = 0;
-
-// swiperItems.forEach((items, key) => {
-// items.addEventListener("click", () => {
-//   animation(key);
-// });
-// });
-
-// pagination.forEach((btn, key) => {
-// btn.addEventListener("click", () => {
-//   animation(key);
-// });
-// });
-
-// update(0);
-
-// function update(key) {
-// pagination[idx].classList.remove("active");
-// pagination[key].classList.add("active");
-// idx = key;
-// }
-
-// function animation(key) {
-// try {
-//   if (event.wheelDelta < 0) {
-//     move = swiperItems[key].nextElementSibling.offsetLeft;
-//     key++;
-//   } else if (event.wheelDelta > 0) {
-//     move = swiperItems[key].previousElementSibling.offsetLeft;
-//     key--;
-//   } else {
-//     move = swiperItems[key].offsetLeft;
-//   }
-// } catch {}
-// visualSwiper.style = `transform: translateX(-${move}px)`;
-// // update(key);
-// }
-
-console.log(pagination);
-console.log(swiperItems);
-
 const follower = document.querySelector(".follower");
 
 window.addEventListener("mousemove", (e) => {

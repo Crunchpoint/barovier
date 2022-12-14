@@ -27,81 +27,88 @@
         rgba(0, 0, 0, 0) 100%
       );
     }
-    .visual_container {
-      z-index: 6;
-      picture {
-        display: block;
-        height: 125vh;
-        overflow: hidden;
-        position: relative;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      .visual-text-box {
+    .visual-wrapper {
+      display: flex;
+      // overflow: hidden;
+      transition: 300ms;
+      .visual_container {
+        flex-shrink: 0;
         width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0 8.5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        z-index: 1;
-        h2 {
-          font-size: 4.375em;
-          line-height: 1.11429em;
-          letter-spacing: 3px;
-          font-weight: 100;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          z-index: 1;
+        z-index: 6;
+        picture {
+          display: block;
+          height: 125vh;
           overflow: hidden;
-          span {
-            display: inline-block;
-            opacity: 0;
-            font-family: "BDT";
-            color: #fff;
-            padding: 2px;
-          }
-          span:nth-child(4),
-          span:nth-child(8),
-          span:nth-child(24),
-          span:nth-child(28) {
-            white-space: pre-wrap;
-          }
-          span:nth-child(16) {
-            display: inline;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
-        p:nth-of-type(1) {
-          font-size: 24px;
-          line-height: 32px;
-          color: #fff;
-          margin-bottom: 70px;
+        .visual-text-box {
+          width: 100%;
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 0 8.5%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
           z-index: 1;
-          font-weight: 100;
-          font-family: "Roboto1";
-          opacity: 0;
-          animation: fadeInUp 400ms 2200ms 1 both;
-        }
-        .button01 {
-          z-index: 1;
-          a {
-            display: inline-block;
-            background: transparent;
-            border: 1px solid white;
-            padding: 10px 40px;
-            color: #fff;
-            margin-bottom: 100px;
+          h2 {
+            font-size: 4.375em;
+            line-height: 1.11429em;
+            letter-spacing: 3px;
+            font-weight: 100;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 2px;
+            z-index: 1;
+            overflow: hidden;
+            span {
+              display: inline-block;
+              opacity: 0;
+              font-family: "BDT";
+              color: #fff;
+              padding: 2px;
+            }
+            span:nth-child(4),
+            span:nth-child(8),
+            span:nth-child(24),
+            span:nth-child(28) {
+              white-space: pre-wrap;
+            }
+            span:nth-child(16) {
+              display: inline;
+            }
+          }
+          p:nth-of-type(1) {
+            font-size: 24px;
+            line-height: 32px;
+            color: #fff;
+            margin-bottom: 70px;
+            z-index: 1;
+            font-weight: 100;
+            font-family: "Roboto1";
             opacity: 0;
-            animation: fadeInUp 400ms 2400ms 1 both;
+            animation: fadeInUp 400ms 2200ms 1 both;
+          }
+          .button01 {
+            z-index: 1;
+            a {
+              display: inline-block;
+              background: transparent;
+              border: 1px solid white;
+              padding: 10px 40px;
+              color: #fff;
+              margin-bottom: 100px;
+              text-transform: uppercase;
+              font-size: 13px;
+              letter-spacing: 2px;
+              opacity: 0;
+              animation: fadeInUp 400ms 2400ms 1 both;
+            }
           }
         }
       }
@@ -133,6 +140,9 @@
           border-radius: 50%;
           box-sizing: border-box;
           margin-left: 15px;
+          &.active {
+            background-color: #f00;
+          }
         }
       }
     }
@@ -149,6 +159,7 @@
       border: 1px solid rgba(255, 255, 255, 0.5);
       transform: translate(-50%, -50%);
       transition: 80ms;
+      display: none;
       .arrow {
         display: block;
         width: 100%;
@@ -286,7 +297,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       .text-box02 {
         flex-basis: 42.6%;
         h2 {
