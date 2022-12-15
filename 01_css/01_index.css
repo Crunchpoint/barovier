@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   background-color: #000;
+  transition: 1000ms;
   z-index: 3;
   transform: translate3d(0, 0, 0);
 }
@@ -44,7 +45,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.6);
 }
 #main .visual .visual-wrapper .visual_container .visual-text-box {
   width: 100%;

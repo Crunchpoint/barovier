@@ -1,12 +1,12 @@
 // main javascript
 
 // wrap every single word with span tag
-const visualTxt = document.querySelector(".wrapSpanH21");
-
 let tag = "",
   fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   fadeInEffect2 = `fadeInUp 1000ms 0ms 1 both`,
   revealEffect = `revealOpacity 2500ms 1 both`;
+
+const visualTxt = document.querySelector(".wrapSpanH21");
 
 function temp() {
   for (let i = 0; i < visualTxt.textContent.length; i++) {
