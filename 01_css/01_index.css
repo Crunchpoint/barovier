@@ -176,7 +176,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   transform-origin: 50% 50%;
-  transform: translateX(-2px) rotate(-45deg);
+  transition: 250ms;
 }
 #main .content01-container {
   padding: 120px 0 20px 0;

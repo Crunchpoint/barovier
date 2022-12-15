@@ -15,9 +15,6 @@ function temp() {
   visualTxt.innerHTML = tag;
 }
 temp();
-
-// fadeInEffect declaration
-
 // put <br> into between span tag
 const addBr = document.querySelectorAll(".wrapSpanH21 span");
 // pick 15th span tag
@@ -93,13 +90,21 @@ document.addEventListener("scroll", () => {
   // console.log(currentScrollValue);
 });
 
-const follower = document.querySelector(".follower");
-
+const follower = document.querySelector(".follower"),
+  arrow = document.querySelector(".arrow");
+// mouse move event
 window.addEventListener("mousemove", (e) => {
   let mouseX = e.clientX,
     mouseY = e.clientY;
   follower.style.left = mouseX + "px";
   follower.style.top = mouseY + "px";
+  if (e.clientX < innerWidth / 2) {
+    console.log("dd");
+    arrow.style = `transform: translateX(2px) rotate(-225deg);`;
+  } else if (e.clientX > innerWidth / 2) {
+    console.log("ff");
+    arrow.style = `transform: translateX(-2px) rotate(-45deg);`;
+  }
 });
 
 const visualAll = document.querySelectorAll(".visual_container");
