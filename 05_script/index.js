@@ -108,28 +108,25 @@ window.addEventListener("mousemove", (e) => {
 });
 
 const visualAll = document.querySelectorAll(".visual_container");
+// visualWrapper = document.querySelector(".visual-wrapper");
 
 let zIndex = 5,
   idx = 0,
   idx2 = 1,
   innerWidth = window.innerWidth;
 
+window.addEventListener('resize',()=>{
+  
+})
+
 visualAll.forEach((value, key) => {
-  visualAll[key].style = `width: ${innerWidth}px`;
+  visualAll[0].style.transform = `translate3d(calc(-${
+    innerWidth * idx
+  }px + 0%), 0px, 0px)`;
+  visualAll[key].style = `transform: translate3d(calc(-${
+    innerWidth * key
+  }px + 100%), 0px, 0px)`;
 });
-
-function visualValue() {
-  visualAll.forEach((value, key) => {
-    visualAll[0].style.transform = `translate3d(calc(-${
-      innerWidth * idx
-    }px + 0%), 0px, 0px)`;
-    visualAll[key].style.transform = `translate3d(calc(-${
-      innerWidth * key
-    }px + 100%), 0px, 0px)`;
-  });
-}
-visualValue();
-
 function nextImg() {
   // 첫번째 페이지 z인덱스로 뒤로 보냄
   visualAll[idx].style.transform = `translate3d(calc(-${
