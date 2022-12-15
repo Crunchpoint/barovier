@@ -1,7 +1,7 @@
 // main javascript
 
-// wrap every single word with spean tag
-const visualTxt = document.querySelector(".visual-text-box h2");
+// wrap every single word with span tag
+const visualTxt = document.querySelector(".wrapSpanH21");
 
 let tag = "",
   fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
@@ -15,15 +15,16 @@ function temp() {
   visualTxt.innerHTML = tag;
 }
 temp();
+
 // fadeInEffect declaration
 
 // put <br> into between span tag
-const addBr = document.querySelectorAll(".visual-text-box span");
+const addBr = document.querySelectorAll(".wrapSpanH21 span");
 // pick 15th span tag
 addBr[15].innerHTML = `<br>`;
 // I set num = 0 and it srarts at 1..
 let num = -1;
-// put delat on each word
+// put delay on each word
 let inter = setInterval(() => {
   if (num < addBr.length - 1) {
     num++;
@@ -91,6 +92,7 @@ document.addEventListener("scroll", () => {
   }
   // console.log(currentScrollValue);
 });
+
 const follower = document.querySelector(".follower");
 
 window.addEventListener("mousemove", (e) => {
@@ -98,4 +100,70 @@ window.addEventListener("mousemove", (e) => {
     mouseY = e.clientY;
   follower.style.left = mouseX + "px";
   follower.style.top = mouseY + "px";
+});
+
+const visualAll = document.querySelectorAll(".visual_container");
+
+let zIndex = 5,
+  idx = 0,
+  idx2 = 1,
+  innerWidth = window.innerWidth;
+
+visualAll.forEach((value, key) => {
+  visualAll[key].style = `width: ${innerWidth}px`;
+});
+
+function visualValue() {
+  visualAll.forEach((value, key) => {
+    visualAll[0].style.transform = `translate3d(calc(-${
+      innerWidth * idx
+    }px + 0%), 0px, 0px)`;
+    visualAll[key].style.transform = `translate3d(calc(-${
+      innerWidth * key
+    }px + 100%), 0px, 0px)`;
+  });
+}
+visualValue();
+
+function nextImg() {
+  // 첫번째 페이지 z인덱스로 뒤로 보냄
+  visualAll[idx].style.transform = `translate3d(calc(-${
+    innerWidth * idx
+  }px + 0%), 0px, -500px)`;
+  // opacity 0으로 사라짐
+  visualAll[idx].style.opacity = `0`;
+  // z-index 뒤로 보냄
+  // visual1.style.zIndex = `${zIndex--}`;
+  // idx++로 다음페이지 적용
+  idx++;
+  // 오른쪽 페이지 가지고옴
+  visualAll[idx].style.transform = `translate3d(calc(-${
+    innerWidth * idx2
+  }px + 0%), 0px, 0px)`;
+  // idx2++로 다음번에 적용
+  idx2++;
+}
+
+function preImg() {
+  idx2--;
+  visualAll[idx].style.transform = `translate3d(calc(-${
+    innerWidth * idx2
+  }px + 100%), 0px, 0px)`;
+  idx--;
+  visualAll[idx].style.transform = `translate3d(calc(-${
+    innerWidth * idx
+  }px + 0%), 0px, 0px)`;
+  visualAll[idx].style.opacity = `1`;
+  // visual1.style.zIndex = `${zIndex++}`;
+}
+
+window.addEventListener("click", (e) => {
+  console.log(e.clientX);
+  if (e.clientX > innerWidth / 2 && idx < visualAll.length - 1) {
+    console.log("next");
+    nextImg();
+  } else if (e.clientX < innerWidth / 2 && idx > 0) {
+    console.log("prev");
+    preImg();
+  }
 });
