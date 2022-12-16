@@ -7,6 +7,8 @@ let fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   clickIdx = 0,
   idx = 0,
   idx2 = 1,
+  startPoint = 0,
+  endPoint = 0,
   innerWidth = window.innerWidth;
 
 const visualTxtAll = document.querySelectorAll(".wrapSpanH2");
@@ -45,7 +47,8 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   visualBtn = document.querySelectorAll(".visual-text-box a"),
   swiper = document.querySelector(".swiper"),
   indicator = document.querySelectorAll(".pagination li"),
-  visual = document.querySelector('.visual')
+  visual = document.querySelector(".visual"),
+  cont5drag = document.querySelector(".contentSlider");
 
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
@@ -99,6 +102,20 @@ spanTxt5[12].innerHTML = `<br>`;
 spanTxt6[19].innerHTML = `<br>`;
 
 // scroll event
+
+// window.addEventListener("scroll", (key) => {
+//   function temp() {
+//     elFigure.forEach((value, key) => {
+//       if (
+//         elFigure[key].offsetTop - window.innerHeight * 0.8 <
+//         window.pageYOffset
+//       ) {
+//         elFigure[key].classList.add("active");
+//       }
+//     });
+//   }
+//   temp(key);
+// });
 
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
@@ -222,5 +239,27 @@ visual.addEventListener("click", (e) => {
     setTimeout(() => {
       spanEffect(spanArray[clickIdx]);
     }, 500);
+  }
+});
+// 수정중 
+cont5drag.addEventListener("mousedown", (e) => {
+  console.log("mousedown", e.pageX);
+  startPoint = e.pageX;
+  cont5drag.forEach(() => {
+    cont5drag[key].style = `transform: translateX(-100px)`;
+  });
+});
+
+cont5drag.addEventListener("mouseup", (e) => {
+  console.log("mouseup", e.pageX);
+  endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
+  if (startPoint < endPoint) {
+    // 마우스가 오른쪽으로 드래그 된 경우
+    console.log("prev move");
+    // prevMove();
+  } else if (startPoint > endPoint) {
+    // 마우스가 왼쪽으로 드래그 된 경우
+    console.log("next move");
+    // nextMove();
   }
 });

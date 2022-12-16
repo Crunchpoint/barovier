@@ -58,6 +58,7 @@
           flex-direction: column;
           justify-content: flex-end;
           z-index: 1;
+          user-select: none;
           h2 {
             font-size: 4.375em;
             line-height: 1.11429em;
@@ -67,6 +68,7 @@
             text-transform: uppercase;
             z-index: 1;
             overflow: hidden;
+
             span {
               display: inline-block;
               opacity: 0;
@@ -86,39 +88,36 @@
               display: inline;
             }
           }
-          .spanTxt4{
+          .spanTxt4 {
             span:nth-child(5),
             span:nth-child(9),
-            span:nth-child(25)
-            {
+            span:nth-child(25) {
               white-space: pre-wrap;
             }
-            span:nth-child(20){
+            span:nth-child(20) {
               display: inline;
             }
           }
-          .spanTxt5{
+          .spanTxt5 {
             span:nth-child(5),
             span:nth-child(7),
             span:nth-child(16),
             span:nth-child(22),
-            span:nth-child(26)
-            {
+            span:nth-child(26) {
               white-space: pre-wrap;
             }
-            span:nth-child(13){
+            span:nth-child(13) {
               display: inline;
             }
           }
-          .spanTxt6{
+          .spanTxt6 {
             span:nth-child(11),
             span:nth-child(32),
             span:nth-child(35),
-            span:nth-child(39)
-            {
+            span:nth-child(39) {
               white-space: pre-wrap;
             }
-            span:nth-child(20){
+            span:nth-child(20) {
               display: inline;
             }
           }
@@ -531,6 +530,7 @@
   .content05-container {
     padding: 120px 0;
     text-align: center;
+    overflow: hidden;
     .content05-item {
       max-width: 1280px;
       padding: 0 40px;
@@ -558,7 +558,6 @@
           display: flex;
           width: 100%;
           height: 100%;
-          overflow: hidden;
           .item01 {
             opacity: 0;
             margin-right: 40px;

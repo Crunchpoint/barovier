@@ -56,6 +56,10 @@
   flex-direction: column;
   justify-content: flex-end;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 #main .visual .visual-wrapper .visual_container .visual-text-box h2 {
   font-size: 4.375em;
@@ -509,6 +513,7 @@
 #main .content05-container {
   padding: 120px 0;
   text-align: center;
+  overflow: hidden;
 }
 #main .content05-container .content05-item {
   max-width: 1280px;
@@ -537,7 +542,6 @@
   display: flex;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 #main .content05-container .content05-item .content05-img-swiper .contents-wrapper .item01 {
   opacity: 0;
