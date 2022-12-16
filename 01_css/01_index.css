@@ -1796,6 +1796,8 @@
     font-size: 0.8125em;
     letter-spacing: 2px;
     opacity: 0;
+    -webkit-animation: name duration timing-function delay iteration-count direction fill-mode;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
   }
   #main .visual .visual-wrapper .containerItem01 {
     z-index: 6;

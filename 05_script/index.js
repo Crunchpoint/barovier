@@ -201,11 +201,15 @@ window.addEventListener("click", (e) => {
     console.log("next");
     nextImg();
     clickIdx++;
-    spanEffect(spanArray[clickIdx]);
+    setTimeout(() => {
+      spanEffect(spanArray[clickIdx]);
+    }, 500);
   } else if (e.clientX < innerWidth / 2 && idx > 0) {
     console.log("prev");
     preImg();
     clickIdx--;
-    spanEffect(spanArray[clickIdx]);
+    setTimeout(() => {
+      spanEffect(spanArray[clickIdx]);
+    }, 500);
   }
 });
