@@ -42,14 +42,15 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   visualAll = document.querySelectorAll(".visual_container"),
   visualP = document.querySelectorAll(".visual-text-box p:nth-of-type(1)"),
   visualBtn = document.querySelectorAll(".visual-text-box a"),
-  swiper = document.querySelector(".swiper");
+  swiper = document.querySelector(".swiper"),
+  indicator = document.querySelectorAll(".pagination li");
 
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
 // I set num = 0 and it srarts at 1..
 function init() {
   const aniSpan = document.querySelectorAll(".visual-text-box span");
-  aniSpan.forEach(function (el) {
+  aniSpan.forEach((el) => {
     el.style.animation = "";
   });
   visualP.forEach((el) => {
@@ -57,6 +58,11 @@ function init() {
   });
   visualBtn.forEach((el) => {
     el.style.animation = "";
+  });
+  // swiper.style.animation = "";
+  // swiper.style.opacity = "0";
+  indicator.forEach((el) => {
+    el.style = "";
   });
 }
 function spanEffect(value) {
@@ -83,6 +89,9 @@ function spanEffect(value) {
     }ms 1 both`;
   });
   swiper.style.animation = `fadeInUp 400ms ${value.length * 70}ms 1 both`;
+  indicator.forEach(() => {
+    indicator[clickIdx].style.backgroundColor = `white`;
+  });
 }
 
 spanTxt1[15].innerHTML = `<br>`;

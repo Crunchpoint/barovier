@@ -183,10 +183,6 @@ $tablet: 768px;
         left: 8.5%;
         opacity: 0;
         .pagination {
-          li:nth-child(1) {
-            margin: 0;
-            background: #fff;
-          }
           li {
             display: inline-block;
             width: 7px;
@@ -1001,7 +997,6 @@ $tablet: 768px;
                 font-size: 0.8125em;
                 letter-spacing: 2px;
                 opacity: 0;
-                animation: name duration timing-function delay iteration-count direction fill-mode;
               }
             }
           }
@@ -1025,17 +1020,12 @@ $tablet: 768px;
           z-index: 1;
         }
       }
-
       .swiper {
         position: absolute;
         top: calc(100vh - 60px);
         left: 8.5%;
         opacity: 0;
         .pagination {
-          li:nth-child(1) {
-            margin: 0;
-            background: #fff;
-          }
           li {
             display: inline-block;
             width: 7px;
