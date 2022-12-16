@@ -41,7 +41,8 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   arrow = document.querySelector(".arrow"),
   visualAll = document.querySelectorAll(".visual_container"),
   visualP = document.querySelectorAll(".visual-text-box p:nth-of-type(1)"),
-  visualBtn = document.querySelectorAll(".visual-text-box a");
+  visualBtn = document.querySelectorAll(".visual-text-box a"),
+  swiper = document.querySelector(".swiper");
 
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
@@ -78,9 +79,10 @@ function spanEffect(value) {
   });
   visualBtn.forEach(() => {
     visualBtn[idx].style.animation = `fadeInUp 400ms ${
-      value.length * 70
+      value.length * 65
     }ms 1 both`;
   });
+  swiper.style.animation = `fadeInUp 400ms ${value.length * 70}ms 1 both`;
 }
 
 spanTxt1[15].innerHTML = `<br>`;

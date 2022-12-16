@@ -181,6 +181,7 @@ $tablet: 768px;
         position: absolute;
         top: calc(100vh - 60px);
         left: 8.5%;
+        opacity: 0;
         .pagination {
           li:nth-child(1) {
             margin: 0;
@@ -1029,6 +1030,7 @@ $tablet: 768px;
         position: absolute;
         top: calc(100vh - 60px);
         left: 8.5%;
+        opacity: 0;
         .pagination {
           li:nth-child(1) {
             margin: 0;
