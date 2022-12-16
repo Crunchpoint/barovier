@@ -27,6 +27,7 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   spanTxt3 = document.querySelectorAll(".spanTxt3 span"),
   spanTxt4 = document.querySelectorAll(".spanTxt4 span"),
   spanTxt5 = document.querySelectorAll(".spanTxt5 span"),
+  aniSpan = document.querySelectorAll(".visual-text-box span"),
   spanTxt6 = document.querySelectorAll(".spanTxt6 span"),
   elMain = document.querySelector("#main"),
   cont1txtBox = document.querySelectorAll(".fadeInEffect01"),
@@ -43,13 +44,13 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   visualP = document.querySelectorAll(".visual-text-box p:nth-of-type(1)"),
   visualBtn = document.querySelectorAll(".visual-text-box a"),
   swiper = document.querySelector(".swiper"),
-  indicator = document.querySelectorAll(".pagination li");
+  indicator = document.querySelectorAll(".pagination li"),
+  visual = document.querySelector('.visual')
 
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
 // I set num = 0 and it srarts at 1..
 function init() {
-  const aniSpan = document.querySelectorAll(".visual-text-box span");
   aniSpan.forEach((el) => {
     el.style.animation = "";
   });
@@ -59,8 +60,6 @@ function init() {
   visualBtn.forEach((el) => {
     el.style.animation = "";
   });
-  // swiper.style.animation = "";
-  // swiper.style.opacity = "0";
   indicator.forEach((el) => {
     el.style = "";
   });
@@ -169,17 +168,17 @@ window.addEventListener("resize", function responsiveWidth() {
   baseWidth(innerWidth);
 });
 /////////////////// 위치 기본값 ///////////////////
-function baseWidth(resizeWidth) {
+function baseWidth() {
   visualAll.forEach((value, key) => {
     visualAll[idx].style.transform = `translate3d(calc(-${
-      resizeWidth * idx
+      innerWidth * idx
     }px + 0%), 0px, 0px)`;
     visualAll[key].style = `transform: translate3d(calc(-${
-      resizeWidth * key
-    }px + 100%), 0px, 0px); width: ${resizeWidth}px;`;
+      innerWidth * key
+    }px + 100%), 0px, 0px); width: ${innerWidth}px;`;
   });
 }
-baseWidth(innerWidth);
+baseWidth();
 /////////////////// 다음 이미지 함수 ///////////////////
 function nextImg() {
   visualAll[idx].style = `transform: translate3d(calc(-${
@@ -191,7 +190,7 @@ function nextImg() {
     innerWidth * idx2
   }px + 0%), 0px, 0px); transition-duration: 700ms`;
   idx2++;
-  console.log("nextImg function width is " + innerWidth);
+  console.log("current window width is  " + innerWidth);
 }
 /////////////////// 이전 이미지 함수 ///////////////////
 function preImg() {
@@ -204,10 +203,11 @@ function preImg() {
     innerWidth * idx
   }px + 0%), 0px, 0px); transition-duration: 700ms`;
   visualAll[idx].style.opacity = `1`;
+  console.log("current window width is  " + innerWidth);
 }
 /////////////////// 클릭이벤트 실행 ///////////////////
 spanEffect(spanArray[0]);
-window.addEventListener("click", (e) => {
+visual.addEventListener("click", (e) => {
   if (e.clientX > innerWidth / 2 && idx < visualAll.length - 1) {
     console.log("next");
     nextImg();
