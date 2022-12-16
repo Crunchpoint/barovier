@@ -3,7 +3,11 @@
 // wrap every single word with span tag
 let fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   fadeInEffect2 = `fadeInUp 1000ms 0ms 1 both`,
-  revealEffect = `revealOpacity 2500ms 1 both`;
+  revealEffect = `revealOpacity 2500ms 1 both`,
+  clickIdx = 0,
+  idx = 0,
+  idx2 = 1,
+  innerWidth = window.innerWidth;
 
 const visualTxtAll = document.querySelectorAll(".wrapSpanH2");
 
@@ -23,11 +27,39 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   spanTxt3 = document.querySelectorAll(".spanTxt3 span"),
   spanTxt4 = document.querySelectorAll(".spanTxt4 span"),
   spanTxt5 = document.querySelectorAll(".spanTxt5 span"),
-  spanTxt6 = document.querySelectorAll(".spanTxt6 span");
+  spanTxt6 = document.querySelectorAll(".spanTxt6 span"),
+  elMain = document.querySelector("#main"),
+  cont1txtBox = document.querySelectorAll(".fadeInEffect01"),
+  elItemImg = document.querySelector(".content01-container img"),
+  elItemCon = document.querySelector(".content01-img01 picture"),
+  cont3txt = document.querySelector(".content03-text"),
+  cont3b1 = document.querySelector(".content03-text a"),
+  cont4img1 = document.querySelector(".content04-bg img:nth-child(2)"),
+  cont5txtBox = document.querySelectorAll(".fadeInEffect02"),
+  cont5Item = document.querySelectorAll(".contentSlider"),
+  follower = document.querySelector(".follower"),
+  arrow = document.querySelector(".arrow"),
+  visualAll = document.querySelectorAll(".visual_container"),
+  visualP = document.querySelectorAll(".visual-text-box p:nth-of-type(1)"),
+  visualBtn = document.querySelectorAll(".visual-text-box a");
+
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
 // I set num = 0 and it srarts at 1..
+function init() {
+  const aniSpan = document.querySelectorAll(".visual-text-box span");
+  aniSpan.forEach(function (el) {
+    el.style.animation = "";
+  });
+  visualP.forEach((el) => {
+    el.style.animation = "";
+  });
+  visualBtn.forEach((el) => {
+    el.style.animation = "";
+  });
+}
 function spanEffect(value) {
+  init();
   let num = -1;
   // put delay on each word
   let inter = setInterval(() => {
@@ -38,22 +70,26 @@ function spanEffect(value) {
     }
     value[num].style.animation += fadeInEffect;
   }, 50);
+
+  visualP.forEach(() => {
+    visualP[idx].style.animation = `fadeInUp 400ms ${
+      value.length * 60
+    }ms 1 both`;
+  });
+  visualBtn.forEach(() => {
+    visualBtn[idx].style.animation = `fadeInUp 400ms ${
+      value.length * 70
+    }ms 1 both`;
+  });
 }
+
 spanTxt1[15].innerHTML = `<br>`;
 spanTxt4[19].innerHTML = `<br>`;
 spanTxt5[12].innerHTML = `<br>`;
 spanTxt6[19].innerHTML = `<br>`;
-console.log(spanTxt2[19]);
+
 // scroll event
-const elMain = document.querySelector("#main"),
-  cont1txtBox = document.querySelectorAll(".fadeInEffect01"),
-  elItemImg = document.querySelector(".content01-container img"),
-  elItemCon = document.querySelector(".content01-img01 picture"),
-  cont3txt = document.querySelector(".content03-text"),
-  cont3b1 = document.querySelector(".content03-text a"),
-  cont4img1 = document.querySelector(".content04-bg img:nth-child(2)"),
-  cont5txtBox = document.querySelectorAll(".fadeInEffect02"),
-  cont5Item = document.querySelectorAll(".contentSlider");
+
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
     value = window.pageYOffset / elItemCon.offsetTop + 1;
@@ -103,8 +139,6 @@ document.addEventListener("scroll", () => {
   // console.log(currentScrollValue);
 });
 
-const follower = document.querySelector(".follower"),
-  arrow = document.querySelector(".arrow");
 // mouse move event
 window.addEventListener("mousemove", (e) => {
   let mouseX = e.clientX,
@@ -117,52 +151,38 @@ window.addEventListener("mousemove", (e) => {
     arrow.style = `transform: translateX(-2px) rotate(-45deg);`;
   }
 });
-
-const visualAll = document.querySelectorAll(".visual_container");
-// visualWrapper = document.querySelector(".visual-wrapper");
-
-let idx = 0,
-  idx2 = 1,
-  innerWidth = window.innerWidth;
-
-function baseWidth(get) {
-  visualAll.forEach((value, key) => {
-    visualAll[idx].style.transform = `translate3d(calc(-${
-      get * idx
-    }px + 0%), 0px, 0px)`;
-    visualAll[key].style = `transform: translate3d(calc(-${
-      get * key
-    }px + 100%), 0px, 0px); width: ${get}px;`;
-  });
-}
-
-baseWidth(innerWidth);
-
+/////////////////// 리사이즈 이벤트 ///////////////////
 window.addEventListener("resize", function responsiveWidth() {
-  let innerWidth = elMain.getBoundingClientRect().width;
-  console.log(innerWidth);
+  innerWidth = window.innerWidth;
+  console.log("resized width is " + innerWidth);
   baseWidth(innerWidth);
 });
-
+/////////////////// 위치 기본값 ///////////////////
+function baseWidth(resizeWidth) {
+  visualAll.forEach((value, key) => {
+    visualAll[idx].style.transform = `translate3d(calc(-${
+      resizeWidth * idx
+    }px + 0%), 0px, 0px)`;
+    visualAll[key].style = `transform: translate3d(calc(-${
+      resizeWidth * key
+    }px + 100%), 0px, 0px); width: ${resizeWidth}px;`;
+  });
+}
+baseWidth(innerWidth);
+/////////////////// 다음 이미지 함수 ///////////////////
 function nextImg() {
-  // 첫번째 페이지 z인덱스로 뒤로 보냄
   visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx
   }px + 0%), 0px, -500px); transition-duration: 700ms`;
-  // opacity 0으로 사라짐
   visualAll[idx].style.opacity = `0`;
-  // z-index 뒤로 보냄
-  // visual1.style.zIndex = `${zIndex--}`;
-  // idx++로 다음페이지 적용
   idx++;
-  // 오른쪽 페이지 가지고옴
   visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx2
   }px + 0%), 0px, 0px); transition-duration: 700ms`;
-  // idx2++로 다음번에 적용
   idx2++;
+  console.log("nextImg function width is " + innerWidth);
 }
-
+/////////////////// 이전 이미지 함수 ///////////////////
 function preImg() {
   idx2--;
   visualAll[idx].style = `transform: translate3d(calc(-${
@@ -173,23 +193,19 @@ function preImg() {
     innerWidth * idx
   }px + 0%), 0px, 0px); transition-duration: 700ms`;
   visualAll[idx].style.opacity = `1`;
-  // visual1.style.zIndex = `${zIndex++}`;
 }
+/////////////////// 클릭이벤트 실행 ///////////////////
 spanEffect(spanArray[0]);
-let ddd = 1;
 window.addEventListener("click", (e) => {
-  // console.log(e.clientX);
   if (e.clientX > innerWidth / 2 && idx < visualAll.length - 1) {
     console.log("next");
     nextImg();
-    spanEffect(spanArray[ddd]);
-    ddd++;
-    console.log(ddd);
+    clickIdx++;
+    spanEffect(spanArray[clickIdx]);
   } else if (e.clientX < innerWidth / 2 && idx > 0) {
     console.log("prev");
     preImg();
-    ddd--;
-    spanEffect(spanArray[ddd]);
-    console.log(ddd);
+    clickIdx--;
+    spanEffect(spanArray[clickIdx]);
   }
 });
