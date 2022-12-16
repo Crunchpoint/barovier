@@ -21,7 +21,6 @@
 #main .visual .visual-wrapper .visual_container {
   flex-shrink: 0;
   width: 100%;
-  transition: 1000ms;
 }
 #main .visual .visual-wrapper .visual_container picture {
   display: block;
@@ -75,13 +74,40 @@
   color: #fff;
   padding: 2px;
 }
-#main .visual .visual-wrapper .visual_container .visual-text-box h2 span:nth-child(4),
-#main .visual .visual-wrapper .visual_container .visual-text-box h2 span:nth-child(8),
-#main .visual .visual-wrapper .visual_container .visual-text-box h2 span:nth-child(24),
-#main .visual .visual-wrapper .visual_container .visual-text-box h2 span:nth-child(28) {
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(4),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(8),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(24),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(28) {
   white-space: pre-wrap;
 }
-#main .visual .visual-wrapper .visual_container .visual-text-box h2 span:nth-child(16) {
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(16) {
+  display: inline;
+}
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(5),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(9),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(25) {
+  white-space: pre-wrap;
+}
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(20) {
+  display: inline;
+}
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(5),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(7),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(16),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(22),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(26) {
+  white-space: pre-wrap;
+}
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(13) {
+  display: inline;
+}
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(11),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(32),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(35),
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(39) {
+  white-space: pre-wrap;
+}
+#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(20) {
   display: inline;
 }
 #main .visual .visual-wrapper .visual_container .visual-text-box p:nth-of-type(1) {

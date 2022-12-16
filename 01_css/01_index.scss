@@ -20,7 +20,6 @@
       .visual_container {
         flex-shrink: 0;
         width: 100%;
-        transition: 1000ms;
         picture {
           display: block;
           height: 125vh;
@@ -34,7 +33,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-
             background: linear-gradient(
               0deg,
               #000 0%,
@@ -76,6 +74,8 @@
               color: #fff;
               padding: 2px;
             }
+          }
+          .spanTxt1 {
             span:nth-child(4),
             span:nth-child(8),
             span:nth-child(24),
@@ -83,6 +83,42 @@
               white-space: pre-wrap;
             }
             span:nth-child(16) {
+              display: inline;
+            }
+          }
+          .spanTxt4{
+            span:nth-child(5),
+            span:nth-child(9),
+            span:nth-child(25)
+            {
+              white-space: pre-wrap;
+            }
+            span:nth-child(20){
+              display: inline;
+            }
+          }
+          .spanTxt5{
+            span:nth-child(5),
+            span:nth-child(7),
+            span:nth-child(16),
+            span:nth-child(22),
+            span:nth-child(26)
+            {
+              white-space: pre-wrap;
+            }
+            span:nth-child(13){
+              display: inline;
+            }
+          }
+          .spanTxt6{
+            span:nth-child(11),
+            span:nth-child(32),
+            span:nth-child(35),
+            span:nth-child(39),
+            {
+              white-space: pre-wrap;
+            }
+            span:nth-child(20){
               display: inline;
             }
           }

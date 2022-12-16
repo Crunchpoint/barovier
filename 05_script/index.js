@@ -1,36 +1,49 @@
 // main javascript
 
 // wrap every single word with span tag
-let tag = "",
-  fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
+let fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   fadeInEffect2 = `fadeInUp 1000ms 0ms 1 both`,
   revealEffect = `revealOpacity 2500ms 1 both`;
 
-const visualTxt = document.querySelector(".wrapSpanH21");
+const visualTxtAll = document.querySelectorAll(".wrapSpanH2");
 
-function temp() {
-  for (let i = 0; i < visualTxt.textContent.length; i++) {
-    tag += `<span>${visualTxt.textContent[i]}</span>`;
-  }
-  visualTxt.innerHTML = tag;
+function wordSpan() {
+  visualTxtAll.forEach((value, key) => {
+    let tag = "";
+    for (let i = 0; i < visualTxtAll[key].textContent.length; i++) {
+      tag += `<span>${visualTxtAll[key].textContent[i]}</span>`;
+    }
+    visualTxtAll[key].innerHTML = tag;
+  });
 }
-temp();
-// put <br> into between span tag
-const addBr = document.querySelectorAll(".wrapSpanH21 span");
-// pick 15th span tag
-addBr[15].innerHTML = `<br>`;
-// I set num = 0 and it srarts at 1..
-let num = -1;
-// put delay on each word
-let inter = setInterval(() => {
-  if (num < addBr.length - 1) {
-    num++;
-  } else {
-    clearInterval(inter);
-  }
-  addBr[num].style.animation += fadeInEffect;
-}, 50);
+wordSpan();
 
+const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
+  spanTxt2 = document.querySelectorAll(".spanTxt2 span"),
+  spanTxt3 = document.querySelectorAll(".spanTxt3 span"),
+  spanTxt4 = document.querySelectorAll(".spanTxt4 span"),
+  spanTxt5 = document.querySelectorAll(".spanTxt5 span"),
+  spanTxt6 = document.querySelectorAll(".spanTxt6 span");
+let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
+// pick 15th span tag
+// I set num = 0 and it srarts at 1..
+function spanEffect(value) {
+  let num = -1;
+  // put delay on each word
+  let inter = setInterval(() => {
+    if (num < value.length - 1) {
+      num++;
+    } else {
+      clearInterval(inter);
+    }
+    value[num].style.animation += fadeInEffect;
+  }, 50);
+}
+spanTxt1[15].innerHTML = `<br>`;
+spanTxt4[19].innerHTML = `<br>`;
+spanTxt5[12].innerHTML = `<br>`;
+spanTxt6[19].innerHTML = `<br>`;
+console.log(spanTxt2[19]);
 // scroll event
 const elMain = document.querySelector("#main"),
   cont1txtBox = document.querySelectorAll(".fadeInEffect01"),
@@ -99,10 +112,8 @@ window.addEventListener("mousemove", (e) => {
   follower.style.left = mouseX + "px";
   follower.style.top = mouseY + "px";
   if (e.clientX < innerWidth / 2) {
-    console.log("dd");
     arrow.style = `transform: translateX(2px) rotate(-225deg);`;
   } else if (e.clientX > innerWidth / 2) {
-    console.log("ff");
     arrow.style = `transform: translateX(-2px) rotate(-45deg);`;
   }
 });
@@ -110,28 +121,34 @@ window.addEventListener("mousemove", (e) => {
 const visualAll = document.querySelectorAll(".visual_container");
 // visualWrapper = document.querySelector(".visual-wrapper");
 
-let zIndex = 5,
-  idx = 0,
+let idx = 0,
   idx2 = 1,
   innerWidth = window.innerWidth;
 
-window.addEventListener('resize',()=>{
-  
-})
+function baseWidth(get) {
+  visualAll.forEach((value, key) => {
+    visualAll[idx].style.transform = `translate3d(calc(-${
+      get * idx
+    }px + 0%), 0px, 0px)`;
+    visualAll[key].style = `transform: translate3d(calc(-${
+      get * key
+    }px + 100%), 0px, 0px); width: ${get}px;`;
+  });
+}
 
-visualAll.forEach((value, key) => {
-  visualAll[0].style.transform = `translate3d(calc(-${
-    innerWidth * idx
-  }px + 0%), 0px, 0px)`;
-  visualAll[key].style = `transform: translate3d(calc(-${
-    innerWidth * key
-  }px + 100%), 0px, 0px)`;
+baseWidth(innerWidth);
+
+window.addEventListener("resize", function responsiveWidth() {
+  let innerWidth = elMain.getBoundingClientRect().width;
+  console.log(innerWidth);
+  baseWidth(innerWidth);
 });
+
 function nextImg() {
   // 첫번째 페이지 z인덱스로 뒤로 보냄
-  visualAll[idx].style.transform = `translate3d(calc(-${
+  visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx
-  }px + 0%), 0px, -500px)`;
+  }px + 0%), 0px, -500px); transition-duration: 700ms`;
   // opacity 0으로 사라짐
   visualAll[idx].style.opacity = `0`;
   // z-index 뒤로 보냄
@@ -139,33 +156,40 @@ function nextImg() {
   // idx++로 다음페이지 적용
   idx++;
   // 오른쪽 페이지 가지고옴
-  visualAll[idx].style.transform = `translate3d(calc(-${
+  visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx2
-  }px + 0%), 0px, 0px)`;
+  }px + 0%), 0px, 0px); transition-duration: 700ms`;
   // idx2++로 다음번에 적용
   idx2++;
 }
 
 function preImg() {
   idx2--;
-  visualAll[idx].style.transform = `translate3d(calc(-${
+  visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx2
-  }px + 100%), 0px, 0px)`;
+  }px + 100%), 0px, 0px); transition-duration: 700ms`;
   idx--;
-  visualAll[idx].style.transform = `translate3d(calc(-${
+  visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx
-  }px + 0%), 0px, 0px)`;
+  }px + 0%), 0px, 0px); transition-duration: 700ms`;
   visualAll[idx].style.opacity = `1`;
   // visual1.style.zIndex = `${zIndex++}`;
 }
-
+spanEffect(spanArray[0]);
+let ddd = 1;
 window.addEventListener("click", (e) => {
-  console.log(e.clientX);
+  // console.log(e.clientX);
   if (e.clientX > innerWidth / 2 && idx < visualAll.length - 1) {
     console.log("next");
     nextImg();
+    spanEffect(spanArray[ddd]);
+    ddd++;
+    console.log(ddd);
   } else if (e.clientX < innerWidth / 2 && idx > 0) {
     console.log("prev");
     preImg();
+    ddd--;
+    spanEffect(spanArray[ddd]);
+    console.log(ddd);
   }
 });
