@@ -178,8 +178,8 @@
 }
 #main .visual .follower {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -25px;
+  left: -25px;
   display: block;
   width: 50px;
   height: 50px;
@@ -188,7 +188,7 @@
   z-index: 10;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transform: translate(-50%, -50%);
-  transition: 80ms;
+  transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 200ms linear;
   pointer-events: none;
 }
 #main .visual .follower .arrow {
@@ -198,7 +198,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   transform-origin: 50% 50%;
-  transition: 250ms;
+  transition: 150ms;
 }
 #main .content01-container {
   padding: 120px 0 20px 0;
@@ -513,6 +513,10 @@
 #main .content05-container {
   padding: 120px 0;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   overflow: hidden;
 }
 #main .content05-container .content05-item {
@@ -537,11 +541,13 @@
 }
 #main .content05-container .content05-item .content05-img-swiper {
   margin-top: 60px;
+  transform-style: preserve-3d;
 }
 #main .content05-container .content05-item .content05-img-swiper .contents-wrapper {
   display: flex;
   width: 100%;
-  height: 100%;
+  position: relative;
+  pointer-events: none;
 }
 #main .content05-container .content05-item .content05-img-swiper .contents-wrapper .item01 {
   opacity: 0;

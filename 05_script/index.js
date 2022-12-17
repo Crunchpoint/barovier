@@ -7,8 +7,6 @@ let fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   clickIdx = 0,
   idx = 0,
   idx2 = 1,
-  startPoint = 0,
-  endPoint = 0,
   innerWidth = window.innerWidth;
 
 const visualTxtAll = document.querySelectorAll(".wrapSpanH2");
@@ -29,26 +27,14 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   spanTxt3 = document.querySelectorAll(".spanTxt3 span"),
   spanTxt4 = document.querySelectorAll(".spanTxt4 span"),
   spanTxt5 = document.querySelectorAll(".spanTxt5 span"),
-  aniSpan = document.querySelectorAll(".visual-text-box span"),
   spanTxt6 = document.querySelectorAll(".spanTxt6 span"),
-  elMain = document.querySelector("#main"),
-  cont1txtBox = document.querySelectorAll(".fadeInEffect01"),
-  elItemImg = document.querySelector(".content01-container img"),
-  elItemCon = document.querySelector(".content01-img01 picture"),
-  cont3txt = document.querySelector(".content03-text"),
-  cont3b1 = document.querySelector(".content03-text a"),
-  cont4img1 = document.querySelector(".content04-bg img:nth-child(2)"),
-  cont5txtBox = document.querySelectorAll(".fadeInEffect02"),
-  cont5Item = document.querySelectorAll(".contentSlider"),
-  follower = document.querySelector(".follower"),
-  arrow = document.querySelector(".arrow"),
+  visual = document.querySelector(".visual"),
   visualAll = document.querySelectorAll(".visual_container"),
+  aniSpan = document.querySelectorAll(".visual-text-box span"),
   visualP = document.querySelectorAll(".visual-text-box p:nth-of-type(1)"),
   visualBtn = document.querySelectorAll(".visual-text-box a"),
   swiper = document.querySelector(".swiper"),
-  indicator = document.querySelectorAll(".pagination li"),
-  visual = document.querySelector(".visual"),
-  cont5drag = document.querySelector(".contentSlider");
+  indicator = document.querySelectorAll(".pagination li");
 
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
@@ -116,6 +102,15 @@ spanTxt6[19].innerHTML = `<br>`;
 //   }
 //   temp(key);
 // });
+const elMain = document.querySelector("#main"),
+  cont1txtBox = document.querySelectorAll(".fadeInEffect01"),
+  elItemImg = document.querySelector(".content01-container img"),
+  elItemCon = document.querySelector(".content01-img01 picture"),
+  cont3txt = document.querySelector(".content03-text"),
+  cont3b1 = document.querySelector(".content03-text a"),
+  cont4img1 = document.querySelector(".content04-bg img:nth-child(2)"),
+  cont5txtBox = document.querySelectorAll(".fadeInEffect02"),
+  cont5Item = document.querySelectorAll(".contentSlider");
 
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
@@ -166,12 +161,15 @@ document.addEventListener("scroll", () => {
   // console.log(currentScrollValue);
 });
 
+const follower = document.querySelector(".follower"),
+  arrow = document.querySelector(".arrow");
+
 // mouse move event
 window.addEventListener("mousemove", (e) => {
   let mouseX = e.clientX,
     mouseY = e.clientY;
-  follower.style.left = mouseX + "px";
-  follower.style.top = mouseY + "px";
+  follower.style = `transform: translate3d(${mouseX}px, ${mouseY}px, 0px)`;
+  // follower.style = `transform: translate3d(${mouseY} + "px"`;
   if (e.clientX < innerWidth / 2) {
     arrow.style = `transform: translateX(2px) rotate(-225deg);`;
   } else if (e.clientX > innerWidth / 2) {
@@ -241,25 +239,44 @@ visual.addEventListener("click", (e) => {
     }, 500);
   }
 });
-// 수정중 
-cont5drag.addEventListener("mousedown", (e) => {
-  console.log("mousedown", e.pageX);
-  startPoint = e.pageX;
-  cont5drag.forEach(() => {
-    cont5drag[key].style = `transform: translateX(-100px)`;
-  });
+// 수정중
+
+const cont5slider = document.querySelector(".content05-img-swiper"),
+  innerSlider = document.querySelector(".contents-wrapper");
+
+/* keep track of user's mouse down and up */
+let isPressedDown = false;
+/* x horizontal space of cursor from inner cont5slider */
+let cursorXSpace;
+
+cont5slider.addEventListener("mousedown", (e) => {
+  isPressedDown = true;
+  cursorXSpace = e.offsetX - innerSlider.offsetLeft;
+  cont5slider.style.cursor = "grabbing";
 });
 
-cont5drag.addEventListener("mouseup", (e) => {
-  console.log("mouseup", e.pageX);
-  endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
-  if (startPoint < endPoint) {
-    // 마우스가 오른쪽으로 드래그 된 경우
-    console.log("prev move");
-    // prevMove();
-  } else if (startPoint > endPoint) {
-    // 마우스가 왼쪽으로 드래그 된 경우
-    console.log("next move");
-    // nextMove();
-  }
+cont5slider.addEventListener("mouseup", () => {
+  cont5slider.style.cursor = "grab";
 });
+
+window.addEventListener("mouseup", () => {
+  isPressedDown = false;
+});
+
+cont5slider.addEventListener("mousemove", (e) => {
+  if (!isPressedDown) return;
+  e.preventDefault();
+  innerSlider.style.left = `${e.offsetX - cursorXSpace}px`;
+  boundCards();
+});
+
+function boundCards() {
+  // const container_rect = cont5slider.getBoundingClientRect();
+  // const cards_rect = innerSlider.getBoundingClientRect();
+
+  if (parseInt(innerSlider.style.left) > 0) {
+    innerSlider.style.left = 0;
+  } else if (parseInt(innerSlider.style.left) < -2000) {
+    innerSlider.style.left = `-${2000}px`;
+  }
+}
