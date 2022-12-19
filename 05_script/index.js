@@ -28,17 +28,15 @@ const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
   spanTxt4 = document.querySelectorAll(".spanTxt4 span"),
   spanTxt5 = document.querySelectorAll(".spanTxt5 span"),
   spanTxt6 = document.querySelectorAll(".spanTxt6 span"),
-  visual = document.querySelector(".visual"),
-  visualAll = document.querySelectorAll(".visual_container"),
   aniSpan = document.querySelectorAll(".visual-text-box span"),
   visualP = document.querySelectorAll(".visual-text-box p:nth-of-type(1)"),
   visualBtn = document.querySelectorAll(".visual-text-box a"),
   swiper = document.querySelector(".swiper"),
   indicator = document.querySelectorAll(".pagination li");
-
+// spanTxt# array..
 let spanArray = [spanTxt1, spanTxt2, spanTxt3, spanTxt4, spanTxt5, spanTxt6];
 // pick 15th span tag
-// I set num = 0 and it srarts at 1..
+// init animation
 function init() {
   aniSpan.forEach((el) => {
     el.style.animation = "";
@@ -54,6 +52,7 @@ function init() {
   });
 }
 function spanEffect(value) {
+  // run init and clear previous effects
   init();
   let num = -1;
   // put delay on each word
@@ -81,7 +80,7 @@ function spanEffect(value) {
     indicator[clickIdx].style.backgroundColor = `white`;
   });
 }
-
+// need to be revised
 spanTxt1[15].innerHTML = `<br>`;
 spanTxt4[19].innerHTML = `<br>`;
 spanTxt5[12].innerHTML = `<br>`;
@@ -111,7 +110,7 @@ const elMain = document.querySelector("#main"),
   cont4img1 = document.querySelector(".content04-bg img:nth-child(2)"),
   cont5txtBox = document.querySelectorAll(".fadeInEffect02"),
   cont5Item = document.querySelectorAll(".contentSlider");
-
+// scroll event
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
     value = window.pageYOffset / elItemCon.offsetTop + 1;
@@ -124,7 +123,7 @@ document.addEventListener("scroll", () => {
       }, key * 200);
     });
   }
-  // background and font color effect
+  // background and font color effects
   if (currentScrollValue > 1500) {
     elMain.style.color = "#484848";
     elMain.style.backgroundColor = "white";
@@ -134,7 +133,7 @@ document.addEventListener("scroll", () => {
   }
   // image scaling
   elItemImg.style.transform = `scale(${value})`;
-
+  // text box fade in
   if (currentScrollValue > 2900) {
     cont3txt.style.animation = revealEffect;
   }
@@ -160,8 +159,9 @@ document.addEventListener("scroll", () => {
   }
   // console.log(currentScrollValue);
 });
-
-const follower = document.querySelector(".follower"),
+// mouse follower
+const visualAll = document.querySelectorAll(".visual_container"),
+  follower = document.querySelector(".follower"),
   arrow = document.querySelector(".arrow");
 
 // mouse move event
@@ -176,13 +176,14 @@ window.addEventListener("mousemove", (e) => {
     arrow.style = `transform: translateX(-2px) rotate(-45deg);`;
   }
 });
-/////////////////// 리사이즈 이벤트 ///////////////////
+
+// resize event
 window.addEventListener("resize", function responsiveWidth() {
   innerWidth = window.innerWidth;
   console.log("resized width is " + innerWidth);
   baseWidth(innerWidth);
 });
-/////////////////// 위치 기본값 ///////////////////
+// default value for visual cards
 function baseWidth() {
   visualAll.forEach((value, key) => {
     visualAll[idx].style.transform = `translate3d(calc(-${
@@ -194,7 +195,7 @@ function baseWidth() {
   });
 }
 baseWidth();
-/////////////////// 다음 이미지 함수 ///////////////////
+// function next card effect
 function nextImg() {
   visualAll[idx].style = `transform: translate3d(calc(-${
     innerWidth * idx
@@ -207,7 +208,7 @@ function nextImg() {
   idx2++;
   console.log("current window width is  " + innerWidth);
 }
-/////////////////// 이전 이미지 함수 ///////////////////
+// function prev card effect
 function preImg() {
   idx2--;
   visualAll[idx].style = `transform: translate3d(calc(-${
@@ -220,8 +221,11 @@ function preImg() {
   visualAll[idx].style.opacity = `1`;
   console.log("current window width is  " + innerWidth);
 }
-/////////////////// 클릭이벤트 실행 ///////////////////
+// click event :: move card and word effect
+const visual = document.querySelector(".visual");
+// run span effect for the first page
 spanEffect(spanArray[0]);
+
 visual.addEventListener("click", (e) => {
   if (e.clientX > innerWidth / 2 && idx < visualAll.length - 1) {
     console.log("next");
@@ -239,12 +243,12 @@ visual.addEventListener("click", (e) => {
     }, 500);
   }
 });
-// 수정중
 
+// revising...
 const cont5slider = document.querySelector(".content05-img-swiper"),
   innerSlider = document.querySelector(".contents-wrapper");
 
-/* keep track of user's mouse down and up */
+/* keep track my mouse down and up */
 let isPressedDown = false;
 /* x horizontal space of cursor from inner cont5slider */
 let cursorXSpace;
@@ -271,6 +275,7 @@ cont5slider.addEventListener("mousemove", (e) => {
 });
 
 function boundCards() {
+  // need to be revised below
   // const container_rect = cont5slider.getBoundingClientRect();
   // const cards_rect = innerSlider.getBoundingClientRect();
 
@@ -280,3 +285,29 @@ function boundCards() {
     innerSlider.style.left = `-${2000}px`;
   }
 }
+
+// const slider = document.querySelector('.contents-wrapper');
+
+// let isDragging = false;
+// let currentX;
+// let startX;
+// let distance = 0;
+
+// slider.addEventListener('mousedown', e => {
+//   startX = e.pageX - slider.offsetLeft;
+//   isDragging = true;
+// });
+
+// slider.addEventListener('mouseup', () => {
+//   isDragging = false;
+// });
+
+// slider.addEventListener('mousemove', e => {
+//   if (isDragging) {
+//     e.preventDefault();
+//     currentX = e.pageX - slider.offsetLeft;
+//     distance = currentX - startX;
+//     // Update the position of the slider based on the distance the mouse has moved
+//     slider.style.transform = `translateX(${distance}px)`;
+//   }
+// });

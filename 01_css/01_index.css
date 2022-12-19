@@ -547,7 +547,6 @@
   display: flex;
   width: 100%;
   position: relative;
-  pointer-events: none;
 }
 #main .content05-container .content05-item .content05-img-swiper .contents-wrapper .item01 {
   opacity: 0;
