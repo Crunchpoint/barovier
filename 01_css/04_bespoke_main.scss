@@ -237,82 +237,13 @@
       }
     }
   }
-  .content03 {
-    margin-top: 120px;
-    .content03-inner {
-      max-width: 1280px;
-      margin: auto;
-      padding: 0 40px;
-      position: relative;
-      h2 {
-        font-size: 1em;
-        line-height: 1.0625em;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: 400;
-      }
-      .content03-wrapper {
-        position: relative;
-        margin-top: 10px;
-        text-align: center;
-        overflow: hidden;
-        .content03-swiper {
-          transform: translate3d(16%, 0, 0);
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          .content03-swiper-active {
-            position: relative;
-            width: calc(61.666% + 76px);
-            max-width: 816px;
-            flex-shrink: 0;
-            h3 {
-              height: 86px;
-              font-size: 2.5em;
-              line-height: 1.075em;
-              text-align: center;
-              font-weight: 400;
-              margin-bottom: 60px;
-            }
-            .content03-img01 {
-              padding: 0 38px;
-              position: relative;
-              picture {
-                padding-bottom: 62.162%;
-                position: relative;
-                width: 100%;
-                display: block;
-                img {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                }
-              }
-            }
-            .img01-text {
-              font-size: 1.125em;
-              line-height: 1.38889em;
-              font-weight: 300;
-              text-align: center;
-              margin: 90px -38px 0 -38px;
-            }
-          }
-        }
-      }
-    }
-  }
   .content04 {
     margin-top: 120px;
+    overflow: hidden;
     .content04-inner {
       max-width: 1280px;
       margin: auto;
       padding: 0 40px;
-      position: relative;
       h2 {
         font-size: 1em;
         line-height: 1.0625em;
@@ -323,55 +254,60 @@
         opacity: 0;
       }
       .content04-wrapper {
-        position: relative;
         margin-top: 10px;
         text-align: center;
-        overflow: hidden;
         .content04-swiper {
           transform: translate3d(16%, 0, 0);
-          position: relative;
           width: 100%;
           height: 100%;
           display: flex;
           .content04-swiper-active {
-            position: relative;
             width: calc(61.666% + 76px);
             max-width: 816px;
             flex-shrink: 0;
             opacity: 0;
-            h3 {
-              height: 86px;
-              font-size: 2.5em;
-              line-height: 1.075em;
-              text-align: center;
-              font-weight: 400;
-              margin-bottom: 60px;
+            &.swiper-slide-active p {
+              opacity: 1;
+              transition: 1500ms;
             }
-            .content04-img01 {
-              padding: 0 38px;
+            &.swiper-slide-active h3 {
+              opacity: 1;
+              transition: 1500ms;
+            }
+          }
+          h3 {
+            height: 86px;
+            font-size: 2.5em;
+            line-height: 1.075em;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 60px;
+            opacity: 0;
+          }
+          .content04-img01 {
+            padding: 0 38px;
+            picture {
+              padding-bottom: 62.162%;
               position: relative;
-              picture {
-                padding-bottom: 62.162%;
-                position: relative;
+              width: 100%;
+              display: block;
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                display: block;
-                img {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                }
+                height: 100%;
+                object-fit: cover;
               }
             }
-            .img01-text {
-              font-size: 1.125em;
-              line-height: 1.38889em;
-              font-weight: 300;
-              text-align: center;
-              margin: 90px -38px 0 -38px;
-            }
+          }
+          .img01-text {
+            font-size: 1.125em;
+            line-height: 1.38889em;
+            font-weight: 300;
+            text-align: center;
+            margin: 90px -38px 0 -38px;
+            opacity: 0;
           }
         }
       }

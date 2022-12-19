@@ -263,6 +263,7 @@
 }
 #main .content02-container .content02-item01 .text-box01 {
   flex-basis: 42.6%;
+  opacity: 0;
 }
 #main .content02-container .content02-item01 .text-box01 h2 {
   font-size: 2.5em;
@@ -325,6 +326,7 @@
 }
 #main .content02-container .content02-item02 .text-box02 {
   flex-basis: 42.6%;
+  opacity: 0;
 }
 #main .content02-container .content02-item02 .text-box02 h2 {
   font-size: 2.5em;
@@ -541,19 +543,17 @@
 }
 #main .content05-container .content05-item .content05-img-swiper {
   margin-top: 60px;
-  transform-style: preserve-3d;
 }
 #main .content05-container .content05-item .content05-img-swiper .contents-wrapper {
   display: flex;
   width: 100%;
-  position: relative;
 }
 #main .content05-container .content05-item .content05-img-swiper .contents-wrapper .item01 {
   opacity: 0;
   margin-right: 40px;
   padding-bottom: 130px;
   flex-shrink: 0;
-  width: 45%;
+  max-width: 45%;
   min-width: 340px;
   position: relative;
 }
@@ -591,7 +591,7 @@
   margin-right: 40px;
   padding-bottom: 130px;
   flex-shrink: 0;
-  width: 45%;
+  max-width: 45%;
   min-width: 340px;
   position: relative;
 }
@@ -639,7 +639,7 @@
   margin-right: 40px;
   padding-bottom: 130px;
   flex-shrink: 0;
-  width: 45%;
+  max-width: 45%;
   min-width: 340px;
   position: relative;
 }
@@ -687,7 +687,7 @@
   margin-right: 40px;
   padding-bottom: 130px;
   flex-shrink: 0;
-  width: 45%;
+  max-width: 45%;
   min-width: 340px;
   position: relative;
 }
@@ -738,7 +738,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
-  width: 45%;
+  max-width: 45%;
   min-width: 340px;
   position: relative;
 }
@@ -1356,6 +1356,7 @@
   #main .content05-container {
     padding: 60px 0;
     text-align: center;
+    overflow: hidden;
   }
   #main .content05-container .content05-item {
     max-width: 1280px;
@@ -1382,7 +1383,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
   #main .content05-container .content05-item .content05-img-swiper .contents-wrapper .item01 {
     margin-right: 40px;
@@ -2143,6 +2143,7 @@
   #main .content05-container {
     padding: 120px 0;
     text-align: center;
+    overflow: hidden;
   }
   #main .content05-container .content05-item {
     max-width: 1280px;
@@ -2169,7 +2170,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
   #main .content05-container .content05-item .content05-img-swiper .contents-wrapper .item01 {
     margin-right: 40px;

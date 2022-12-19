@@ -280,6 +280,7 @@
       flex-direction: row-reverse;
       .text-box01 {
         flex-basis: 42.6%;
+        opacity: 0;
         h2 {
           font-size: 2.5em;
           line-height: 1.075em;
@@ -342,6 +343,7 @@
       align-items: center;
       .text-box02 {
         flex-basis: 42.6%;
+        opacity: 0;
         h2 {
           font-size: 2.5em;
           line-height: 1.075em;
@@ -556,18 +558,17 @@
       }
       .content05-img-swiper {
         margin-top: 60px;
-        transform-style: preserve-3d;
+        // transform-style: preserve-3d;
         .contents-wrapper {
           display: flex;
           width: 100%;
-          position: relative;
           // pointer-events: none;
           .item01 {
             opacity: 0;
             margin-right: 40px;
             padding-bottom: 130px;
             flex-shrink: 0;
-            width: 45%;
+            max-width: 45%;
             min-width: 340px;
             position: relative;
             picture {
@@ -605,7 +606,7 @@
             margin-right: 40px;
             padding-bottom: 130px;
             flex-shrink: 0;
-            width: 45%;
+            max-width: 45%;
             min-width: 340px;
             position: relative;
             &::before {
@@ -653,7 +654,7 @@
             margin-right: 40px;
             padding-bottom: 130px;
             flex-shrink: 0;
-            width: 45%;
+            max-width: 45%;
             min-width: 340px;
             position: relative;
             &::before {
@@ -701,7 +702,7 @@
             margin-right: 40px;
             padding-bottom: 130px;
             flex-shrink: 0;
-            width: 45%;
+            max-width: 45%;
             min-width: 340px;
             position: relative;
             &::before {
@@ -752,7 +753,7 @@
             flex-direction: column;
             justify-content: space-between;
             flex-shrink: 0;
-            width: 45%;
+            max-width: 45%;
             min-width: 340px;
             position: relative;
             &::before {

@@ -102,6 +102,9 @@
   margin: auto;
   padding: 0 40px;
 }
+#main .content01-container .content01-text .content01-text-box {
+  opacity: 0;
+}
 #main .content01-container .content01-text .content01-text-box p {
   font-size: 1.5em;
   line-height: 1.333em;
@@ -133,6 +136,10 @@
 #main .content02-container .content02-menu li a {
   font-size: 0.9375em;
   letter-spacing: 1px;
+}
+#main .content02-container .content02-menu li a.active {
+  font-weight: bold;
+  font-size: 20px;
 }
 #main .content02-container .content02-projects {
   margin-top: 120px;

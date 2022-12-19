@@ -529,6 +529,7 @@ $tablet: 768px;
     .content05-container {
       padding: 60px 0;
       text-align: center;
+      overflow: hidden;
       .content05-item {
         max-width: 1280px;
         padding: 0 25px;
@@ -554,7 +555,6 @@ $tablet: 768px;
             display: flex;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             .item01 {
               margin-right: 40px;
               padding-bottom: 100px;
@@ -1355,6 +1355,7 @@ $tablet: 768px;
     .content05-container {
       padding: 120px 0;
       text-align: center;
+      overflow: hidden;
       .content05-item {
         max-width: 1280px;
         padding: 0 40px;
@@ -1380,7 +1381,6 @@ $tablet: 768px;
             display: flex;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             .item01 {
               margin-right: 40px;
               padding-bottom: 130px;
