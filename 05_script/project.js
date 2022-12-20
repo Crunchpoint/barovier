@@ -25,7 +25,8 @@ let inter = setInterval(() => {
 }, 50);
 
 const elMain = document.querySelector("#main"),
-  cont1txtBox = document.querySelector(".content01-text-box");
+  cont1txtBox = document.querySelector(".content01-text-box"),
+  cont2menu = document.querySelector(".content02-menu");
 
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop;
@@ -58,13 +59,14 @@ document.addEventListener("scroll", () => {
     });
   }
   scrollEvent(cont1txtBox, cont1txtBox, fadeInEffect2);
-
   if (currentScrollValue > 1500) {
     elMain.style.color = "#484848";
     elMain.style.backgroundColor = "white";
+    cont2menu.style.backgroundColor = "white";
   } else if (currentScrollValue < 1500) {
     elMain.style.color = "#ffffff";
     elMain.style.backgroundColor = "black";
+    cont2menu.style.backgroundColor = "black";
   }
 });
 // let idx = sessionStorage.idx || 0;

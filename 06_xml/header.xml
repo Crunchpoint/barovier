@@ -98,5 +98,12 @@
 				</path>
 			</g>
 		</svg>
+		<div class="cookie-inner">
+			<div class="cookie-contents">
+				<div class="cookie-header"></div>
+				<div class="cookie-main"></div>
+				<div class="cookie-buttons"></div>
+			</div>
+		</div>
 	</div>
 </div>

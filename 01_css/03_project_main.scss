@@ -122,10 +122,11 @@
     .content02-menu {
       border-bottom: 1px solid #d4d4d4;
       position: sticky;
-      top: 0;
+      top: 70px;
       left: 0;
       z-index: 2;
       padding: 30px 40px;
+      transition: 1000ms;
       ul {
         display: flex;
         text-align: left;

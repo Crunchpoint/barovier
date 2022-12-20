@@ -7,8 +7,7 @@ let fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   clickIdx = 0,
   idx = 0,
   idx2 = 1,
-  innerWidth = window.innerWidth,
-  scTop = window.scrollY;
+  innerWidth = window.innerWidth;
 
 const visualTxtAll = document.querySelectorAll(".wrapSpanH2");
 
