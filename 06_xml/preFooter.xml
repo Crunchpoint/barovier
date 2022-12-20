@@ -4,7 +4,7 @@
 		<h2>Newsletter</h2>
 		<h3>Stay up to date on news</h3>
 		<p>Subscribe to receive news and updates</p>
-		<form>
+		<form class="form1">
 			<input type="email" placeholder="E-mail" />
 			<input type="submit" value="Subscribe" />
 		</form>

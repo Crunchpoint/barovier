@@ -1,0 +1,53 @@
+@import url(./00_common.css);
+#main {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  transition: 1000ms;
+  z-index: 3;
+  transform: translate3d(0, 0, 0);
+}
+#main .visual {
+  width: 100%;
+  position: relative;
+}
+#main .visual .visual_container {
+  z-index: 6;
+}
+#main .visual .visual_container .visual-text-box {
+  width: 100%;
+  position: absolute;
+  top: 41.3%;
+  left: 0;
+  padding: 0 8.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+}
+#main .visual .visual_container .visual-text-box h2 {
+  font-size: 4.375em;
+  line-height: 1.11429em;
+  letter-spacing: 3px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+#main .visual .visual_container .visual-text-box h2 span {
+  display: inline-block;
+  opacity: 0;
+  font-family: "BDT";
+  color: #fff;
+  padding: 2px;
+}
+#main .visual .visual_container .visual-text-box p:nth-of-type(1) {
+  font-size: 0.875em;
+  line-height: 1.35714em;
+  color: #fff;
+  margin-bottom: 15px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: fadeInUp 400ms 800ms 1 both;
+          animation: fadeInUp 400ms 800ms 1 both;
+}/*# sourceMappingURL=10_log_in.css.map */

@@ -172,7 +172,6 @@ window.addEventListener("resize", function responsiveWidth() {
   innerWidth = window.innerWidth;
   console.log("resized width is " + innerWidth);
   baseWidth(innerWidth);
-  console.log(scTop);
 });
 // default value for visual cards
 function baseWidth() {
@@ -234,48 +233,6 @@ visual.addEventListener("click", (e) => {
     }, 500);
   }
 });
-
-// revising...
-// const cont5slider = document.querySelector(".content05-img-swiper"),
-//   innerSlider = document.querySelector(".contents-wrapper");
-
-// /* keep track my mouse down and up */
-// let isPressedDown = false;
-// /* x horizontal space of cursor from inner cont5slider */
-// let cursorXSpace;
-
-// cont5slider.addEventListener("mousedown", (e) => {
-//   isPressedDown = true;
-//   cursorXSpace = e.offsetX - innerSlider.offsetLeft;
-//   cont5slider.style.cursor = "grabbing";
-// });
-
-// cont5slider.addEventListener("mouseup", () => {
-//   cont5slider.style.cursor = "grab";
-// });
-
-// window.addEventListener("mouseup", () => {
-//   isPressedDown = false;
-// });
-
-// cont5slider.addEventListener("mousemove", (e) => {
-//   if (!isPressedDown) return;
-//   e.preventDefault();
-//   innerSlider.style.left = `${e.offsetX - cursorXSpace}px`;
-//   // boundCards();
-// });
-
-// function boundCards() {
-//   // need to be revised below
-//   const container_rect = cont5slider.getBoundingClientRect();
-//   const cards_rect = innerSlider.getBoundingClientRect();
-
-//   if (parseInt(innerSlider.style.left) > 0) {
-//     innerSlider.style.left = 0;
-//   } else if (parseInt(innerSlider.style.left) < container_rect) {
-//     innerSlider.style.left = `-${cards_rect}px`;
-//   }
-// }
 
 window.addEventListener("load", () => {
   let sipwerItems = new Swiper(".mySwiper", {

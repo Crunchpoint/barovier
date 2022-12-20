@@ -158,6 +158,20 @@ function headerJs() {
 // };
 // }
 // preFooter Javascript
-function preFooterJs() {}
+function preFooterJs() {
+  const elMail = document.querySelector(".form1 input:nth-child(1)"),
+    elSubmit = document.querySelector(".form1 input:nth-child(2)");
+
+  elSubmit.addEventListener("click", () => {
+    let validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (elMail.value.match(validRegex)) {
+      alert("Thanks for subscribing");
+    } else {
+      alert("Please enter valid email address!");
+    }
+  });
+}
+
 // footer Javascript
 function footerJs() {}

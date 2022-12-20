@@ -38,7 +38,7 @@
 	<!-- login -->
 	<div class="service-menu">
 		<div class="log-in">
-			<a href="#" class="colorSwitch">
+			<a href="./logIn.html" class="colorSwitch">
                 Log In
 			</a>
 		</div>
