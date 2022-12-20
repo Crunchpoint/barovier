@@ -38,6 +38,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          animation: decreaseScale 2000ms 0ms 1 ease-in-out;
         }
       }
       .visual-text-box {
@@ -288,6 +289,14 @@
         }
       }
     }
+  }
+}
+@keyframes decreaseScale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
 @import "_05_media_contact";

@@ -36,6 +36,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: decreaseScale 2000ms 0ms 1 ease-in-out;
+          animation: decreaseScale 2000ms 0ms 1 ease-in-out;
 }
 #main .visual .visual_container .visual-text-box {
   width: 100%;
@@ -782,6 +784,22 @@
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes decreaseScale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes decreaseScale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
 @media (min-width: 360px) and (max-width: 767px) {

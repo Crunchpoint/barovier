@@ -1,3 +1,19 @@
+fetch("./07_json/project_reload.json")
+  .then((res) => {
+    return res.json();
+  })
+  .then((projects) => {
+    allProject(projects.dataAll);
+  });
+
+function allProject(data) {
+  const elProjectItem = document.querySelectorAll(".projectImg");
+  data.forEach((value, key) => {
+    elProjectItem[key].innerHTML += `<picture><img src="${data[key].url}"></picture>`;
+    console.log(data[key]);
+  });
+}
+
 const visualTxt = document.querySelector(".visual-text-box h2");
 
 let tag = "",
@@ -58,6 +74,7 @@ document.addEventListener("scroll", () => {
       }
     });
   }
+
   scrollEvent(cont1txtBox, cont1txtBox, fadeInEffect2);
   if (currentScrollValue > 1500) {
     elMain.style.color = "#484848";
@@ -69,10 +86,37 @@ document.addEventListener("scroll", () => {
     cont2menu.style.backgroundColor = "black";
   }
 });
-// let idx = sessionStorage.idx || 0;
 
-// $(".content02-menu a").eq(idx).addClass("menuOpened");
-// $(".content02-menu li").click(function () {
+let idx = sessionStorage.idx || 0;
+
+$(".content02-menu a").eq(idx).addClass("active");
+$(".content02-menu li").click(function () {
+  let idx = $(this).index();
+  sessionStorage.idx = idx;
+});
+
+// function pageLoad(pageUrl, i) {
+//   $(".content02-projects-wrapper").removeClass("active");
+//   setTimeout(function () {
+//     $(".content02-projects-wrapper").load(pageUrl, function () {
+//       $(this).addClass("active");
+//     });
+//   }, 500);
+//   $("content02-container a").removeClass("on").eq(i).addClass("on");
+// }
+
+// $(".content02-container a").on("click", function (e) {
+//   e.preventDefault();
+//   let url = $(this).attr("href");
 //   let idx = $(this).index();
-//   sessionStorage.idx = idx;
+//   history.pushState({ page: idx, url: url }, "test");
+//   //   let url = this.getAttribute("href");  vanilla
+//   pageLoad(url, idx);
+// });
+
+// $("content02-container a:first").trigger("click");
+// $(window).on("popstate", function () {
+//   let idx = history.state.page;
+//   let url = history.state.url;
+//   pageLoad(url, idx);
 // });

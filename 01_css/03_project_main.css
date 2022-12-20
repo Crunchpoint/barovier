@@ -36,6 +36,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: decreaseScale 2000ms 0ms 1 ease-in-out;
+          animation: decreaseScale 2000ms 0ms 1 ease-in-out;
 }
 #main .visual .visual_container .visual-text-box {
   width: 100%;
@@ -140,6 +142,14 @@
 #main .content02-container .content02-menu li a.active {
   font-weight: bold;
   font-size: 20px;
+}
+#main .content02-container .content02-menu li a.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  height: 0.1em;
+  background-color: #616161;
 }
 #main .content02-container .content02-projects {
   margin-top: 120px;
@@ -259,6 +269,22 @@
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes decreaseScale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes decreaseScale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
 @media (min-width: 360px) and (max-width: 767px) {

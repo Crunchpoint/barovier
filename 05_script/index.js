@@ -20,6 +20,7 @@ function wordSpan() {
     visualTxtAll[key].innerHTML = tag;
   });
 }
+
 wordSpan();
 
 const spanTxt1 = document.querySelectorAll(".spanTxt1 span"),
@@ -141,6 +142,7 @@ document.addEventListener("scroll", () => {
   if (currentScrollValue > 4200) {
     cont4img1.style.transform = `scale(1)`;
   }
+
   scrollEvents(fadeEffect, fadeEffect, fadeInEffect2);
   scrollEvents(cont2txtBox, cont2txtBox, revealEffect, 200);
   scrollEvent(cont3txt, cont3txt, revealEffect);
