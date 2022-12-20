@@ -19,7 +19,7 @@ const visualTxt = document.querySelector(".visual-text-box h2");
 let tag = "",
   fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   fadeInEffect2 = `fadeInUp 1000ms 0ms 1 both`,
-  revealEffect = `revealOpacity 2500ms 1 both`;
+  revealEffect = `revealOpacity 1000ms 1 both`;
 
 function temp() {
   for (let i = 0; i < visualTxt.textContent.length; i++) {

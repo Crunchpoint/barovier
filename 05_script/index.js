@@ -3,7 +3,7 @@
 // wrap every single word with span tag
 let fadeInEffect = `fadeInUp 400ms 0ms 1 both`,
   fadeInEffect2 = `fadeInUp 1000ms 0ms 1 both`,
-  revealEffect = `revealOpacity 500ms 1 both`,
+  revealEffect = `revealOpacity 1000ms 1 both`,
   clickIdx = 0,
   idx = 0,
   idx2 = 1,
@@ -145,7 +145,7 @@ document.addEventListener("scroll", () => {
 
   scrollEvents(fadeEffect, fadeEffect, fadeInEffect2);
   scrollEvents(cont2txtBox, cont2txtBox, revealEffect, 200);
-  scrollEvent(cont3txt, cont3txt, revealEffect);
+  scrollEvent(cont3txt, cont3txt, fadeInEffect2);
   scrollEvent(cont3b1, cont3b1, fadeInEffect2);
   scrollEvents2(cont5Item, cont5Wrapper, fadeInEffect2, 200);
 });
