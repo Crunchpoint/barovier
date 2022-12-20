@@ -12,6 +12,7 @@ function temp() {
   visualTxt.innerHTML = tag;
 }
 temp();
+
 const addBr = document.querySelectorAll(".visual-text-box span");
 let num = -1;
 let inter = setInterval(() => {
@@ -22,3 +23,16 @@ let inter = setInterval(() => {
   }
   addBr[num].style.animation += fadeInEffect;
 }, 50);
+
+const elMail = document.querySelector("#email"),
+  logInBtn = document.querySelector(".logInBtn");
+
+logInBtn.addEventListener("click", () => {
+  let validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (elMail.value.match(validRegex)) {
+    alert("Thanks for subscribing");
+  } else {
+    alert("Please enter valid email address!");
+  }
+});
