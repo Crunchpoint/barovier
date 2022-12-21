@@ -1,66 +1,68 @@
 {
-  "dataAll": [
+  "data": [
     {
       "id": "0",
-      "type":"Hospitality",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_private_residence_moscow_tangeri_habana_lincoln.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Private Residence - Moscow",
+      "location": "Moscow, Russia"
     },
     {
       "id": "1",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_penthouse_sweden_taif.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Penthouse - Sweden",
+      "location": "Sweden"
     },
     {
       "id": "2",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_private_apartment_birmingham_saintgermain_01.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Private Apartment - Birmingham",
+      "location": "Birmingham, UK"
     },
     {
       "id": "3",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_private_villa_lucknow_taif_01.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Private Villa - Lucknow India",
+      "location": "Lucknow, India"
     },
     {
       "id": "4",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_private_residence_moscow_amsterdam_02.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Private Apartment - Moscow",
+      "location": "Moscow, Russia"
     },
     {
       "id": "5",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_private_villa_denmark_taif_01.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Private Villa - Denmark",
+      "location": "Denmark"
     },
     {
       "id": "6",
+      "type": "residential",
       "url": "./02_image/03_projects/bt_zero_gravity_apartment_ukraine_angel_04.jpg",
-      "title": "#",
-      "detail": "##"
+      "title": "Residential",
+      "detail": "Zero Gravity",
+      "location": "Ukraine"
     },
     {
       "id": "7",
-      "url": "./02_image/03_projects/bt_niko_romito_restaurant_bulgari_hotel_milan_07.jpg",
-      "title": "#",
-      "detail": "##"
-    },
-    {
-      "id": "8",
-      "url": "./02_image/03_projects/bt_terranea_resort_california_degas_01.jpg",
-      "title": "#",
-      "detail": "##"
-    },
-    {
-      "id": "9",
-      "url": "./02_image/03_projects/bt_essenza_showroom_bulgaria_izmir_01.jpg",
-      "title": "#",
-      "detail": "##"
+      "type": "residential",
+      "url": "./02_image/03_projects/bt_private_villa_denmark_taif_01.jpg",
+      "title": "Residential",
+      "detail": "Private Residence - Denmark",
+      "location": "Denmark"
     }
   ]
-
 }

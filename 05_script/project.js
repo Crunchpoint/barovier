@@ -3,7 +3,7 @@ fetch("./07_json/project_reload.json")
     return res.json();
   })
   .then((projects) => {
-    allProject(projects.dataAll);
+    allProject(projects.data);
   });
 
 function allProject(data) {
