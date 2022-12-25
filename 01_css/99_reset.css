@@ -1,10 +1,6 @@
-/* v2.0 | 20110126
-  http://meyerweb.com/eric/tools/css/reset/ 
-  License: none (public domain)
-*/
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 html,
 body,
 div,
@@ -90,11 +86,9 @@ video {
   padding: 0;
   border: 0;
   word-break: keep-all;
-
   vertical-align: baseline;
-  /* font-size: 12px; */
-  /* color: #484848; */
-  font-family: "Roboto2";
+  font-size: 100%;
+  font-family: inherit;
 }
 a {
   text-decoration: none;
@@ -143,29 +137,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "BDT";
+  font-family: inherit;
 }
 select {
   border: none;
   border-radius: 0;
   appearance: none;
-}
-.hidden {
-  width: 1px;
-  height: 1px;
-  /* 크기를 1px로 만들어줌 */
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-}
-.inner {
-  width: 83%;
-  height: 100vh;
-  padding: 0 8.5%;
-  top: 0;
-  left: 0;
-}
-* {
-  box-sizing: border-box;
 }
