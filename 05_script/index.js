@@ -171,7 +171,7 @@ window.addEventListener("mousemove", (e) => {
 // resize event
 window.addEventListener("resize", function responsiveWidth() {
   innerWidth = window.innerWidth;
-  console.log("resized width is " + innerWidth);
+  // console.log("resized width is " + innerWidth);
   baseWidth(innerWidth);
 });
 // default value for visual cards
