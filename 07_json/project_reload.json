@@ -67,35 +67,18 @@
     {
       "id": "8",
       "type": "residential",
-      "url": "./02_image/private_residen",
+      "url": "./02_image/03_projects/bt_private_villa_denmark_taif_01.jpg",
       "title": "Residential",
       "detail": "Private Residence - Denmark",
       "location": "Denmark"
     },
-
     {
-      "id": "99",
-      "type": "Hospitality",
-      "url": "./02_image/03_projects/bt_niko_romito_restaurant_bulgari_hotel_milan_07.jpg",
-      "title": "#",
-      "detail": "##",
-      "location": "##"
-    },
-    {
-      "id": "99",
-      "type": "Hospitality",
-      "url": "./02_image/03_projects/bt_terranea_resort_california_degas_01.jpg",
-      "title": "#",
-      "detail": "##",
-      "location": "##"
-    },
-    {
-      "id": "99",
-      "type": "retail",
-      "url": "./02_image/03_projects/bt_essenza_showroom_bulgaria_izmir_01.jpg",
-      "title": "#",
-      "detail": "##",
-      "location": "##"
+      "id": "8",
+      "type": "residential",
+      "url": "./02_image/03_projects/bt_private_villa_denmark_taif_01.jpg",
+      "title": "Residential",
+      "detail": "Private Residence - Denmark",
+      "location": "Denmark"
     }
   ]
 }

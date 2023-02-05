@@ -5,15 +5,15 @@ fetch("./07_json/project_reload.json")
   .then((projects) => {
     allProject(projects.data);
   });
-
 function allProject(data) {
-  const elProjectItem = document.querySelectorAll(".projectImg");
+  const elProjectItem = document.querySelectorAll(".content02-project1");
   data.forEach((value, key) => {
-    elProjectItem[key].innerHTML += `<picture><img src="${data[key].url}"></picture>`;
-    console.log(data[key]);
+    elProjectItem[
+      key
+    ].innerHTML += `<a href="#"><div class="projectImg"><picture><img src="${data[key].url}"></picture></div><div class="content02-textBox1"><p>${data[key].title}</p><h2>${data[key].detail}</h2><p>${data[key].location}</p></div></a>`;
+    console.log(data);
   });
 }
-
 const visualTxt = document.querySelector(".visual-text-box h2");
 
 let tag = "",
@@ -55,10 +55,7 @@ document.addEventListener("scroll", () => {
   }
   function scrollEvents(target, target2, effect, num) {
     target.forEach((value, key) => {
-      if (
-        target2[key].offsetTop - window.innerHeight * 0.8 <
-        window.pageYOffset
-      ) {
+      if (target2[key].offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
         setInterval(() => {
           target[key].style.animation = effect;
         }, key * num);
