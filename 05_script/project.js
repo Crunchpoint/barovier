@@ -11,7 +11,6 @@ function allProject(data) {
     elProjectItem[
       key
     ].innerHTML += `<a href="#"><div class="projectImg"><picture><img src="${data[key].url}"></picture></div><div class="content02-textBox1"><p>${data[key].title}</p><h2>${data[key].detail}</h2><p>${data[key].location}</p></div></a>`;
-    console.log(data);
   });
 }
 const visualTxt = document.querySelector(".visual-text-box h2");
