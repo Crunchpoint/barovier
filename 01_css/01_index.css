@@ -64,7 +64,7 @@
           user-select: none;
 }
 #main .visual .visual-wrapper .visual_container .visual-text-box h2 {
-  font-size: 4.375em;
+  font-size: 4vw;
   line-height: 1.11429em;
   letter-spacing: 3px;
   font-weight: 100;
