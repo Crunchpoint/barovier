@@ -67,14 +67,10 @@ function spanEffect(value) {
   }, 50);
 
   visualP.forEach(() => {
-    visualP[idx].style.animation = `fadeInUp 400ms ${
-      value.length * 60
-    }ms 1 both`;
+    visualP[idx].style.animation = `fadeInUp 400ms ${value.length * 60}ms 1 both`;
   });
   visualBtn.forEach(() => {
-    visualBtn[idx].style.animation = `fadeInUp 400ms ${
-      value.length * 65
-    }ms 1 both`;
+    visualBtn[idx].style.animation = `fadeInUp 400ms ${value.length * 65}ms 1 both`;
   });
   swiper.style.animation = `fadeInUp 400ms ${value.length * 70}ms 1 both`;
   indicator.forEach(() => {
@@ -97,6 +93,16 @@ const elMain = document.querySelector("#main"),
   cont5Wrapper = document.querySelector(".contents-wrapper"),
   cont5Item = document.querySelectorAll(".contentSlider");
 // scroll event
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function () {
+    if (time + wait - Date.now() < 0) {
+      fn();
+      time = Date.now();
+    }
+  };
+}
+// apply throttle
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
     value = window.pageYOffset / elItemCon.offsetTop + 1;
@@ -109,10 +115,7 @@ document.addEventListener("scroll", () => {
 
   function scrollEvents(target, target2, effect, num) {
     target.forEach((value, key) => {
-      if (
-        target2[key].offsetTop - window.innerHeight * 0.8 <
-        window.pageYOffset
-      ) {
+      if (target2[key].offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
         setInterval(() => {
           target[key].style.animation = effect;
         }, key * num);
@@ -177,38 +180,26 @@ window.addEventListener("resize", function responsiveWidth() {
 // default value for visual cards
 function baseWidth() {
   visualAll.forEach((value, key) => {
-    visualAll[idx].style.transform = `translate3d(calc(-${
-      innerWidth * idx
-    }px + 0%), 0px, 0px)`;
-    visualAll[key].style = `transform: translate3d(calc(-${
-      innerWidth * key
-    }px + 100%), 0px, 0px); width: ${innerWidth}px;`;
+    visualAll[idx].style.transform = `translate3d(calc(-${innerWidth * idx}px + 0%), 0px, 0px)`;
+    visualAll[key].style = `transform: translate3d(calc(-${innerWidth * key}px + 100%), 0px, 0px); width: ${innerWidth}px;`;
   });
 }
 baseWidth();
 // function next card effect
 function nextImg() {
-  visualAll[idx].style = `transform: translate3d(calc(-${
-    innerWidth * idx
-  }px + 0%), 0px, -500px); transition-duration: 700ms`;
+  visualAll[idx].style = `transform: translate3d(calc(-${innerWidth * idx}px + 0%), 0px, -500px); transition-duration: 700ms`;
   visualAll[idx].style.opacity = `0`;
   idx++;
-  visualAll[idx].style = `transform: translate3d(calc(-${
-    innerWidth * idx2
-  }px + 0%), 0px, 0px); transition-duration: 700ms`;
+  visualAll[idx].style = `transform: translate3d(calc(-${innerWidth * idx2}px + 0%), 0px, 0px); transition-duration: 700ms`;
   idx2++;
   console.log("current window width is  " + innerWidth);
 }
 // function prev card effect
 function preImg() {
   idx2--;
-  visualAll[idx].style = `transform: translate3d(calc(-${
-    innerWidth * idx2
-  }px + 100%), 0px, 0px); transition-duration: 700ms`;
+  visualAll[idx].style = `transform: translate3d(calc(-${innerWidth * idx2}px + 100%), 0px, 0px); transition-duration: 700ms`;
   idx--;
-  visualAll[idx].style = `transform: translate3d(calc(-${
-    innerWidth * idx
-  }px + 0%), 0px, 0px); transition-duration: 700ms`;
+  visualAll[idx].style = `transform: translate3d(calc(-${innerWidth * idx}px + 0%), 0px, 0px); transition-duration: 700ms`;
   visualAll[idx].style.opacity = `1`;
   console.log("current window width is  " + innerWidth);
 }
