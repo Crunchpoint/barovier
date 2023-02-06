@@ -60,6 +60,7 @@ function spanEffect(value) {
   let inter = setInterval(() => {
     if (num < value.length - 1) {
       num++;
+      console.log("실행중11");
     } else {
       clearInterval(inter);
     }
@@ -103,6 +104,9 @@ function throttle(fn, wait) {
   };
 }
 // apply throttle
+let inter1;
+let inter2;
+let inter3;
 document.addEventListener("scroll", () => {
   let currentScrollValue = document.documentElement.scrollTop,
     value = window.pageYOffset / elItemCon.offsetTop + 1;
@@ -114,18 +118,22 @@ document.addEventListener("scroll", () => {
   }
 
   function scrollEvents(target, target2, effect, num) {
+    clearInterval(inter1);
     target.forEach((value, key) => {
       if (target2[key].offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
-        setInterval(() => {
+        inter1 = setInterval(() => {
           target[key].style.animation = effect;
+          console.log("실행중22");
         }, key * num);
       }
     });
   }
   function scrollEvents2(target, target2, effect, num) {
+    clearInterval(inter2);
     target.forEach((value, key) => {
       if (target2.offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
-        setInterval(() => {
+        inter2 = setInterval(() => {
+          console.log("실행중33");
           target[key].style.animation = effect;
         }, key * num);
       }
