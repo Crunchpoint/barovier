@@ -12,7 +12,6 @@ body::-webkit-scrollbar {
 }
 
 #header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 98;
@@ -88,8 +87,7 @@ body::-webkit-scrollbar {
 }
 #header .header-content01 .search-active.search-open {
   z-index: 3;
-  -webkit-animation: gnbEffect 250ms forwards;
-          animation: gnbEffect 250ms forwards;
+  animation: gnbEffect 250ms forwards;
 }
 #header .header-content01 .search-active .search-wrapper {
   max-width: 1280px;
@@ -126,8 +124,7 @@ body::-webkit-scrollbar {
   opacity: 0;
 }
 #header .header-content01 .search-active .search-wrapper .search-active-bottom input.search-open {
-  -webkit-animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-          animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+  animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
 }
 #header .header-content01 .gnb .gnb-list {
   display: flex;
@@ -309,7 +306,6 @@ body::-webkit-scrollbar {
 }
 
 #footer {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   padding: 50px 8.5%;
@@ -459,31 +455,12 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
-@-webkit-keyframes gnbEffect {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: 100vh;
-  }
-}
-
 @keyframes gnbEffect {
   0% {
     height: 0px;
   }
   100% {
     height: 100vh;
-  }
-}
-@-webkit-keyframes gnbEffect1 {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 @keyframes gnbEffect1 {
@@ -494,14 +471,6 @@ body::-webkit-scrollbar {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes gnbOpenEffect {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(10px);
   }
 }
 @keyframes gnbOpenEffect {
@@ -522,7 +491,6 @@ body::-webkit-scrollbar {
     display: none;
   }
   #header {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 98;
@@ -590,8 +558,7 @@ body::-webkit-scrollbar {
   }
   #header .header-content01 .search-active.search-open {
     z-index: 3;
-    -webkit-animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-            animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+    animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
   }
   #header .header-content01 .search-active .search-wrapper {
     max-width: 1280px;
@@ -643,13 +610,11 @@ body::-webkit-scrollbar {
   }
   #header .header-content01 .gnb.burger-open {
     display: block;
-    -webkit-animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-            animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+    animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
     z-index: -1;
   }
   #header .header-content01 .gnb.burger-open li {
-    -webkit-animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-            animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+    animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
   }
   #header .header-content01 .gnb .gnb-list {
     display: block;
@@ -858,7 +823,6 @@ body::-webkit-scrollbar {
     font-family: "Roboto2";
   }
   #footer {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     padding: 75px 25px 30px;
@@ -1047,7 +1011,6 @@ body::-webkit-scrollbar {
     display: none;
   }
   #header {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 98;
@@ -1114,8 +1077,7 @@ body::-webkit-scrollbar {
   }
   #header .header-content01 .search-active.search-open {
     z-index: 3;
-    -webkit-animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-            animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+    animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
   }
   #header .header-content01 .search-active .search-wrapper {
     max-width: 1280px;
@@ -1166,13 +1128,11 @@ body::-webkit-scrollbar {
   }
   #header .header-content01 .gnb.burger-open {
     display: block;
-    -webkit-animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-            animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+    animation: gnbEffect 250ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
     z-index: -1;
   }
   #header .header-content01 .gnb.burger-open li {
-    -webkit-animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
-            animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
+    animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
   }
   #header .header-content01 .gnb .gnb-list {
     display: block;
@@ -1384,7 +1344,6 @@ body::-webkit-scrollbar {
     font-family: "Roboto2";
   }
   #footer {
-    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     padding: 50px 8.5%;
@@ -1566,14 +1525,6 @@ body::-webkit-scrollbar {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes gnbTranslate {
-  from {
-    transform: translateY(50px);
-  }
-  to {
-    transform: translateY(0);
   }
 }
 @keyframes gnbTranslate {

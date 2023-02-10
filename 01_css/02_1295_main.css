@@ -36,8 +36,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: decreaseScale 2000ms 0ms 1 ease-in-out;
-          animation: decreaseScale 2000ms 0ms 1 ease-in-out;
+  animation: decreaseScale 2000ms 0ms 1 ease-in-out;
 }
 #main .visual .visual_container .visual-text-box {
   width: 100%;
@@ -74,8 +73,7 @@
   margin-bottom: 15px;
   z-index: 1;
   opacity: 0;
-  -webkit-animation: fadeInUp 400ms 600ms 1 both;
-          animation: fadeInUp 400ms 600ms 1 both;
+  animation: fadeInUp 400ms 600ms 1 both;
 }
 #main .visual .visual_container .visual-text-box p:nth-of-type(2) {
   font-size: 1.5em;
@@ -84,8 +82,7 @@
   margin-bottom: 70px;
   z-index: 1;
   opacity: 0;
-  -webkit-animation: fadeInUp 400ms 800ms 1 both;
-          animation: fadeInUp 400ms 800ms 1 both;
+  animation: fadeInUp 400ms 800ms 1 both;
 }
 #main .visual .visual-overlay {
   position: absolute;
@@ -751,16 +748,6 @@
   margin: 90px -38px 0 -38px;
 }
 
-@-webkit-keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 50px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInUp {
   from {
     transform: translate3d(0, 50px, 0);
@@ -770,28 +757,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes revealOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes revealOpacity {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes decreaseScale {
-  from {
-    transform: scale(1.2);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @keyframes decreaseScale {

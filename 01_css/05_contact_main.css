@@ -36,8 +36,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: decreaseScale 2000ms 0ms 1 ease-in-out;
-          animation: decreaseScale 2000ms 0ms 1 ease-in-out;
+  animation: decreaseScale 2000ms 0ms 1 ease-in-out;
 }
 #main .visual .visual_container .visual-text-box {
   width: 100%;
@@ -278,15 +277,6 @@
   display: inline-block;
 }
 
-@-webkit-keyframes decreaseScale {
-  from {
-    transform: scale(1.2);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
 @keyframes decreaseScale {
   from {
     transform: scale(1.2);
@@ -470,7 +460,7 @@
     vertical-align: super;
   }
   #main .webForm .webForm-inner .form .form-item1 .input,
-#main .webForm .webForm-inner .form .form-item1 select {
+  #main .webForm .webForm-inner .form .form-item1 select {
     width: 100%;
     color: #484848;
     border: 1px solid #dcdcdc;
@@ -750,7 +740,7 @@
     vertical-align: super;
   }
   #main .webForm .webForm-inner .form .form-item1 .input,
-#main .webForm .webForm-inner .form .form-item1 select {
+  #main .webForm .webForm-inner .form .form-item1 select {
     width: 100%;
     color: #484848;
     border: 1px solid #dcdcdc;

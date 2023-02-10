@@ -44,8 +44,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(0.6);
-  -webkit-animation: decreaseScale 2000ms 0ms 1 ease-in-out;
-          animation: decreaseScale 2000ms 0ms 1 ease-in-out;
+  animation: decreaseScale 2000ms 0ms 1 ease-in-out;
 }
 #main .visual .visual-wrapper .visual_container .visual-text-box {
   width: 100%;
@@ -60,7 +59,6 @@
   z-index: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #main .visual .visual-wrapper .visual_container .visual-text-box h2 {
@@ -519,7 +517,6 @@
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   overflow: hidden;
 }
@@ -822,16 +819,6 @@
   margin-top: 40px;
 }
 
-@-webkit-keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 50px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInUp {
   from {
     transform: translate3d(0, 50px, 0);
@@ -841,28 +828,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes revealOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes revealOpacity {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes decreaseScale {
-  from {
-    transform: scale(1.2);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @keyframes decreaseScale {
@@ -951,36 +922,36 @@
     padding: 2px;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(4),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(8),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(24),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(28) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(8),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(24),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(28) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(16) {
     display: inline;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(5),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(9),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(25) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(9),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(25) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(20) {
     display: inline;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(5),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(7),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(16),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(22),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(26) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(7),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(16),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(22),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(26) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(13) {
     display: inline;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(11),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(32),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(35),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(39) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(32),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(35),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(39) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(20) {
@@ -1757,36 +1728,36 @@
     padding: 2px;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(4),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(8),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(24),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(28) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(8),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(24),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(28) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt1 span:nth-child(16) {
     display: inline;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(5),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(9),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(25) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(9),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(25) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt4 span:nth-child(20) {
     display: inline;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(5),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(7),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(16),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(22),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(26) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(7),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(16),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(22),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(26) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt5 span:nth-child(13) {
     display: inline;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(11),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(32),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(35),
-#main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(39) {
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(32),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(35),
+  #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(39) {
     white-space: pre-wrap;
   }
   #main .visual .visual-wrapper .visual_container .visual-text-box .spanTxt6 span:nth-child(20) {

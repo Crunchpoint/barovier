@@ -122,8 +122,7 @@ body {
             outline: none;
             opacity: 0;
             &.search-open {
-              animation: gnbEffect1 1000ms forwards
-                cubic-bezier(0.7, 0, 0.27, 0.98);
+              animation: gnbEffect1 1000ms forwards cubic-bezier(0.7, 0, 0.27, 0.98);
             }
           }
           // .searching {
