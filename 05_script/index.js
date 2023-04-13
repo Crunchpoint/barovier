@@ -60,7 +60,6 @@ function spanEffect(value) {
   let inter = setInterval(() => {
     if (num < value.length - 1) {
       num++;
-      console.log("실행중11");
     } else {
       clearInterval(inter);
     }
@@ -118,27 +117,34 @@ document.addEventListener("scroll", () => {
   }
 
   function scrollEvents(target, target2, effect, num) {
-    clearInterval(inter1);
     target.forEach((value, key) => {
       if (target2[key].offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
-        inter1 = setInterval(() => {
-          target[key].style.animation = effect;
-          console.log("실행중22");
-        }, key * num);
+        let delay = key * num;
+        // create a function that sets the animation effect and logs a message
+        const animationFunc = () => {
+          value.style.animation = effect;
+        };
+        // use setTimeout to delay the animation effect by a certain amount of time
+        setTimeout(animationFunc, delay);
       }
     });
   }
   function scrollEvents2(target, target2, effect, num) {
-    clearInterval(inter2);
     target.forEach((value, key) => {
       if (target2.offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
-        inter2 = setInterval(() => {
-          console.log("실행중33");
+        let delay = key * num;
+
+        // create a function that sets the animation effect and logs a message
+        const animationFunc = () => {
           target[key].style.animation = effect;
-        }, key * num);
+        };
+
+        // use setTimeout to delay the animation effect by a certain amount of time
+        setTimeout(animationFunc, delay);
       }
     });
   }
+
   // console.log(window.scrollY);
   if (currentScrollValue > 1500) {
     elMain.style.color = "#484848";

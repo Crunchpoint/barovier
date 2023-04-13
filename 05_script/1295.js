@@ -46,25 +46,28 @@ document.addEventListener("scroll", () => {
   }
   function scrollEvents(target, target2, effect, num) {
     target.forEach((value, key) => {
-      if (
-        target2[key].offsetTop - window.innerHeight * 0.8 <
-        window.pageYOffset
-      ) {
-        setInterval(() => {
-          target[key].style.animation = effect;
+      if (target2[key].offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
+        let timer = setTimeout(() => {
+          value.style.animation = effect;
         }, key * num);
+        // Store the timer ID so it can be cleared later if needed
+        target[key].setAttribute("data-timer-id", timer);
       }
     });
   }
+
   function scrollEvents2(target, target2, effect, num) {
     target.forEach((value, key) => {
       if (target2.offsetTop - window.innerHeight * 0.8 < window.pageYOffset) {
-        setInterval(() => {
-          target[key].style.animation = effect;
+        let timer = setTimeout(() => {
+          value.style.animation = effect;
         }, key * num);
+        // Store the timer ID so it can be cleared later if needed
+        target[key].setAttribute("data-timer-id", timer);
       }
     });
   }
+
   if (currentScrollValue > 1500) {
     elMain.style.color = "#484848";
     elMain.style.backgroundColor = "white";
